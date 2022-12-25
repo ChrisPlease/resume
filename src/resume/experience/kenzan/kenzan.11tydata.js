@@ -1,6 +1,7 @@
 module.exports = {
-  startDate: new Date(2015, 9, 1),
-  endDate: new Date(2017, 12, 12),
+  startDate: new Date(2015, 10, 1),
+  endDate: new Date(2018, 7, 31),
+  location: 'Providence, RI/Denver, CO',
   stack: [
     'AngularJS',
     'React',

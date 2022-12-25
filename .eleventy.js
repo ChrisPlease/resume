@@ -1,25 +1,14 @@
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addNunjucksShortcode('daterange', (startDate, endDate) => {
-    const start = new Intl.DateTimeFormat('en-US', {
-      month: 'short',
-      year: 'numeric',
-      timeZone: 'UTC',
-    }).format(startDate)
+// @ts-check
+// This is just a wrapper so we can have our real config in TypeScript.
+require('ts-node').register({
+  files: true,
+  swc: true,
+  compilerOptions: {
+    module: 'commonjs',
+  },
+})
 
-    const end = endDate
-      ? new Intl.DateTimeFormat('en-US', {
-        month: 'short',
-        year: 'numeric',
-        timeZone: 'UTC'
-      }).format(endDate)
-      : 'Present'
+// @ts-expect-error to avoid "An import path cannot end with a '.ts' extension. "
+const { default: eleventyConfig } = require('./_eleventy/config.ts')
 
-    return `${start}-${end}`;
-  })
-  return {
-    dir: {
-      input: 'src',
-      output: 'dist',
-    },
-  };
-}
+module.exports = eleventyConfig

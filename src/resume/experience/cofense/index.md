@@ -1,9 +1,3 @@
----
-title: Cofense
-date: 2019-04-12
-tags: experience
----
-
 During my tenure at Cofense, I've been an active contributor on
 application modernization efforts, new project initiatives, and
 contributions to the company's internal component library.

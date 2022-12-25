@@ -1,6 +1,6 @@
 --- 
 title: Ideas By Nature
-date: 2017-08
+date: 2017-07-01
 tags: experience
 permalink: false
 ---

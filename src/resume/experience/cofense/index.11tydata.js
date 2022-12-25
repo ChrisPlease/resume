@@ -1,4 +1,7 @@
 module.exports = {
+  title: 'Cofense',
+  date: '2019',
+  tags: ['experience'],
   isRemote: true,
   startDate: new Date(2019, 3, 8),
   location: 'Leesburg, VA',

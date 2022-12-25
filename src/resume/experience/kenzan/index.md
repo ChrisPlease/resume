@@ -1,6 +1,6 @@
 ---
 title: Kenzan
-date: 2015-08
+date: 2015-10-01
 tags: experience
 ---
 Kenzan is a software development consulting agency. During my tenure
