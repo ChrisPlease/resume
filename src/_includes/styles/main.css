@@ -1,0 +1,11 @@
+
+body {
+  font-family: Inter, sans-serif;
+  background: #efefef;
+  color: #333;
+}
+
+a:link,
+a:visited {
+  color: #4444ee;
+}

@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="resume">
+  <div>
+    <h5>Table of Contents</h5>
+    <ul>
+      {%- for item in collections.resume -%}
+        <li>
+          <a href="#{{item.data.title | slug}}">{{ item.data.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {{ content | safe }}
+</div>

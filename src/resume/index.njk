@@ -1,0 +1,11 @@
+---
+title: Resume
+layout: layouts/resume.njk
+permalink: /resume/
+---
+{% for section in collections.resume %}
+  <div class="resume__section">
+    <h2 id="{{ section.data.title | slug }}">{{ section.data.title }}</h2>
+    {{ section.templateContent | safe }}
+  </div>
+{% endfor %}
