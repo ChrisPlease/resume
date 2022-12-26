@@ -8,6 +8,7 @@ export const data = {
 interface Context {
   log(message: string): void;
   slug(message: string): string;
+  daterange(startDate: Date, endDate: Date): string;
 }
 
 interface Data {
@@ -20,8 +21,8 @@ interface Data {
 export function render(this: Context, data: Data): any {
   return (
     <div class="resume">
-      <h1>{data.title} <span>| {data.subtitle}</span></h1>
-      <div class="toc">
+      <h1 class="resume__title">{data.title}<span>{data.subtitle}</span></h1>
+      <div class="resume__toc">
         <h5>Table of Contents</h5>
         <nav>
           <ul>
@@ -39,6 +40,7 @@ export function render(this: Context, data: Data): any {
                             <li>
                               <a href={`#${this.slug(exp.data.title)}`}>
                                 {exp.data.title}
+                                <span dangerouslySetInnerHTML={{ __html: this.daterange(exp.data.startDate, exp.data.endDate) }}></span>
                               </a>
                             </li>
                           ))}
@@ -52,6 +54,7 @@ export function render(this: Context, data: Data): any {
         </nav>
       </div>
       <div
+        class="resume__content"
         dangerouslySetInnerHTML={{ __html: data.content }}
       />
     </div>

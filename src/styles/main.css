@@ -1,7 +1,36 @@
 .resume {
   width: 90%;
-  margin: 0 auto;
+  margin: 48px auto 0;
   max-width: 980px;
+}
+
+.resume__title {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+}
+
+.resume__title span {
+  color: #aaa;
+  font-size: 90%;
+  position: relative;
+  margin-left: 2rem;
+}
+
+.resume__title span::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  width: 2px;
+  height: 100%;
+  background: #aaa;
+}
+
+.resume__toc {
+  position: sticky;
+  right: 0;
+  top: 40px;
+  background: #efefef;
 }
 
 .resume__section:not(:last-child) {
@@ -10,4 +39,8 @@
 
 .experience-section:not(:last-child) {
   border-bottom: 1px solid #ccc;
+}
+
+.experience-section__header {
+  position: relative;
 }
