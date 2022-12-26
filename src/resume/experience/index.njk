@@ -1,20 +1,25 @@
 ---
 tags: resume
 title: Experience
+date: '2002'
 ---
 
 {%- for exp in collections.experience | reverse -%}
   <div class="experience-section">
-    <h3
-      id="{{ exp.data.title | slug }}"
-    >
-      {{ exp.data.title }}
-    </h3>
-    <address>{{ exp.data.location}}</address>
-    {% daterange exp.data.startDate, exp.data.endDate %}
-    {{ exp.templateContent | safe }}
+    <div class="experience-section__header">
+      <h3
+        id="{{ exp.data.title | slug }}"
+      >
+        {{ exp.data.title }}
+      </h3>
+      <address>{{ exp.data.location}}</address>
+      {% daterange exp.data.startDate, exp.data.endDate %}
+    </div>
+    <div class="experience-section__content">
+      {{ exp.templateContent | safe }}
+    </div>
     <div class="experience-section__tech-stack">
-      <h4>Stack</h4>
+      <h4>Technologies</h4>
       <ul>
         {%- for item in exp.data.stack -%}
           <li>{{ item }}</li>

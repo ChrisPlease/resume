@@ -1,6 +1,7 @@
 ---
 title: Introduction
 tags: resume
+date: '2001'
 ---
 
 I'm a Front End Engineer with over 10 years in the industry. Most 

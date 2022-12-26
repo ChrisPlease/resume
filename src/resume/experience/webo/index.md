@@ -1,8 +1,3 @@
----
-title: Webolutions
-date: 2013-08-01
-tags: experience
----
 
 Webolutions is a small marketing agency located in the Denver Metro Area. I 
 was responsible for designing and implementing custom WordPress themes, 

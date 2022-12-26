@@ -12,14 +12,15 @@ interface Context {
 
 interface Data {
   readonly title: string;
+  readonly subtitle: string;
   readonly content: string;
   readonly collections: Record<string, any[]>;
 }
 
 export function render(this: Context, data: Data): any {
-  console.log(data.collections.resume[0])
   return (
     <div class="resume">
+      <h1>{data.title} <span>| {data.subtitle}</span></h1>
       <div class="toc">
         <h5>Table of Contents</h5>
         <nav>
