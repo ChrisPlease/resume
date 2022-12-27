@@ -39,6 +39,11 @@
   position: absolute;
 }
 
+.resume__toc-content ul {
+  margin: 0;
+  padding: 0;
+}
+
 .resume__section:not(:last-child) {
   border-bottom: 1px solid #777;
 }
