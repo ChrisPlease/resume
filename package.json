@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "eleventy --serve",
+    "serve": "npm run build -- --serve",
+    "prebuild": "npm run clean",
     "build": "node --require esbuild-register node_modules/.bin/eleventy",
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"

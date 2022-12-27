@@ -12,8 +12,15 @@ export default function (eleventyConfig: Config) {
   })
 
   eleventyConfig.addShortcode('daterange', daterange)
+  eleventyConfig.setServerPassthroughCopyBehavior('copy')
+  eleventyConfig.addPassthroughCopy('src/assets/styles')
+  eleventyConfig.addPassthroughCopy('src/assets/scripts')
 
   eleventyConfig.addPlugin(EleventyVitePlugin, {
+    serverOptions: {
+      showAllHosts: true,
+      domdiff: false,
+    },
     viteOptions: <UserConfig>{
       clearScreen: false,
       server: {
@@ -32,9 +39,6 @@ export default function (eleventyConfig: Config) {
       }
     }
   })
-
-  eleventyConfig.addPassthroughCopy('src/assets/styles')
-  eleventyConfig.addPassthroughCopy('src/assets/scripts')
 
   return {
     dir: {

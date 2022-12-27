@@ -265,6 +265,8 @@ export interface Config {
       ) => void | Promise<void>,
    ): void;
 
+   setServerPassthroughCopyBehavior(type: 'copy' | 'passthrough'): void;
+
    addShortcode(name: string, shortcode: AnyFunction<string>): string;
    addLiquidShortcode(name: string, shortcode: AnyFunction<string>): void;
    addNunjucksShortcode(name: string, shortcode: AnyFunction<string>): void;
