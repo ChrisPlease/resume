@@ -19,12 +19,16 @@ interface Data {
 }
 
 export function render(this: Context, data: Data): any {
+  const button: 'button' = 'button';
   return (
     <div class="resume">
       <h1 class="resume__title">{data.title}<span>{data.subtitle}</span></h1>
       <div class="resume__toc">
-        <h5>Table of Contents</h5>
-        <nav>
+        <h5>
+          <button class="resume__toc-toggle" type={button}>Click</button>
+          Table of Contents
+        </h5>
+        <nav class="resume__toc-content">
           <ul>
             {data.collections.resume
               .map(section => (
@@ -40,7 +44,6 @@ export function render(this: Context, data: Data): any {
                             <li>
                               <a href={`#${this.slug(exp.data.title)}`}>
                                 {exp.data.title}
-                                <span dangerouslySetInnerHTML={{ __html: this.daterange(exp.data.startDate, exp.data.endDate) }}></span>
                               </a>
                             </li>
                           ))}

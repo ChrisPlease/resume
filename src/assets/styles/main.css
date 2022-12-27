@@ -28,9 +28,15 @@
 
 .resume__toc {
   position: sticky;
-  right: 0;
+  left: 100%;
   top: 40px;
   background: #efefef;
+  width: 200px;
+}
+
+.resume__toc-content {
+  overflow: hidden;
+  position: absolute;
 }
 
 .resume__section:not(:last-child) {

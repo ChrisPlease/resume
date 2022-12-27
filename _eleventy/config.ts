@@ -1,5 +1,7 @@
-import { Config } from "../types/eleventy"
-import { daterange } from "./shortcodes"
+import { Config } from '../types/eleventy'
+import EleventyVitePlugin from '@11ty/eleventy-plugin-vite'
+import { UserConfig } from 'vite'
+import { daterange } from './shortcodes'
 
 export default function (eleventyConfig: Config) {
 
@@ -11,7 +13,28 @@ export default function (eleventyConfig: Config) {
 
   eleventyConfig.addShortcode('daterange', daterange)
 
-  eleventyConfig.addPassthroughCopy('src/styles')
+  eleventyConfig.addPlugin(EleventyVitePlugin, {
+    viteOptions: <UserConfig>{
+      clearScreen: false,
+      server: {
+        mode: 'development',
+        middlewareMode: true,
+      },
+      build: {
+        mode: 'production',
+        rollupOptions: {
+          output: {
+            assetFileNames: 'assets/styles/main.[hash].css',
+            chunkFileNames: 'assets/scripts/[name].[hash].js',
+            entryFileNames: 'assets/scripts/[name].[hash].js'
+          }
+        },
+      }
+    }
+  })
+
+  eleventyConfig.addPassthroughCopy('src/assets/styles')
+  eleventyConfig.addPassthroughCopy('src/assets/scripts')
 
   return {
     dir: {
