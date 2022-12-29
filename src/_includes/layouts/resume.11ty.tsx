@@ -24,37 +24,53 @@ export function render(this: Context, data: Data): any {
     <div class="resume">
       <h1 class="resume__title">{data.title}<span>{data.subtitle}</span></h1>
       <div class="resume__toc">
-        <h5>
-          <button class="resume__toc-toggle" type={button}>Click</button>
-          Table of Contents
-        </h5>
-        <nav class="resume__toc-content">
-          <ul>
-            {data.collections.resume
-              .map(section => (
-                <li>
-                  <a href={`#${this.slug(section.data.title)}`}>
-                    {section.data.title}
-                  </a>
-                  {
-                    Object.keys(data.collections)
-                      .includes(this.slug(section.data.title)) && (
-                        <ul>
-                          {data.collections[this.slug(section.data.title)].reverse().map(exp => (
-                            <li>
-                              <a href={`#${this.slug(exp.data.title)}`}>
-                                {exp.data.title}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      )
-                  }
-                </li>
-              ))
-            }
-          </ul>
-        </nav>
+        <div className="resume__toc-header">
+          <button class="resume__toc-print" type={button}>
+            <i className="fa-fw fa-print fa-light fa-xl"></i>
+            <span className="sr-only">Print</span>
+          </button>
+          <button class="resume__toc-toggle" type={button}>
+            <i class="fa fa-fw fa-list-tree fa-light fa-xl"></i>
+            <span class="sr-only">
+              View Table of Contents
+            </span>
+          </button>
+        </div>
+        <div class="resume__toc-content">
+          <h5>
+            Table of Contents
+          </h5>
+          <nav>
+            <ul>
+              {data.collections.resume
+                .map(section => (
+                  <li>
+                    <a href={`#${this.slug(section.data.title)}`}>
+                      {section.data.title}
+                      <i className="fa fa-fw fa-light fa-arrow-right fa-sm"></i>
+                    </a>
+                    {
+                      Object.keys(data.collections)
+                        .includes(this.slug(section.data.title)) && (
+                          <ul>
+                            {data.collections[this.slug(section.data.title)].reverse().map(exp => (
+                              <li>
+                                <a href={`#${this.slug(exp.data.title)}`}>
+                                  {exp.data.title}
+                                  <i className="fa fa-fw fa-light fa-arrow-right fa-sm"></i>
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        )
+                    }
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+
+        </div>
       </div>
       <div
         class="resume__content"

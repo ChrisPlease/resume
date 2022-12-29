@@ -15,7 +15,6 @@ export default function (eleventyConfig: Config) {
   eleventyConfig.setServerPassthroughCopyBehavior('copy')
   eleventyConfig.addPassthroughCopy('src/assets/styles')
   eleventyConfig.addPassthroughCopy('src/assets/scripts')
-
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     serverOptions: {
       showAllHosts: true,
@@ -27,12 +26,22 @@ export default function (eleventyConfig: Config) {
         mode: 'development',
         middlewareMode: true,
       },
+      optimizeDeps: {
+        include: ['@fortawesome/fontawesome-pro'],
+      },
       build: {
         mode: 'production',
         rollupOptions: {
+          external: ['@fortawesome/fontawesome-pro'],
           output: {
-            assetFileNames: 'assets/styles/main.[hash].css',
-            chunkFileNames: 'assets/scripts/[name].[hash].js',
+            manualChunks(id) {
+              if (id.includes('fontawesome')) {
+                return 'fonts'
+              }
+            },
+
+            assetFileNames: 'assets/styles/[name].[hash].css',
+            // chunkFileNames: 'assets/scripts/[name].[hash].js',
             entryFileNames: 'assets/scripts/[name].[hash].js'
           }
         },
