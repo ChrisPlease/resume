@@ -1,25 +1,25 @@
 
-import h from "vhtml";
+import h from 'vhtml'
 
 export const data = {
   layout: 'layouts/base.njk',
-};
+}
 
 interface Context {
-  log(message: string): void;
-  slug(message: string): string;
-  daterange(startDate: Date, endDate: Date): string;
+  log: (message: string) => void
+  slug: (message: string) => string
+  daterange: (startDate: Date, endDate: Date) => string
 }
 
 interface Data {
-  readonly title: string;
-  readonly subtitle: string;
-  readonly content: string;
-  readonly collections: Record<string, any[]>;
+  readonly title: string
+  readonly subtitle: string
+  readonly content: string
+  readonly collections: Record<string, any[]>
 }
 
-export function render(this: Context, data: Data): any {
-  const button: 'button' = 'button';
+export function render (this: Context, data: Data): any {
+  const button: 'button' = 'button'
   return (
     <div class="resume">
       <h1 class="resume__title">{data.title}<span>{data.subtitle}</span></h1>
@@ -37,7 +37,7 @@ export function render(this: Context, data: Data): any {
           </button>
         </div>
         <div class="resume__toc-content">
-          <h5>
+          <h5 class="sr-only">
             Table of Contents
           </h5>
           <nav>
@@ -46,8 +46,9 @@ export function render(this: Context, data: Data): any {
                 .map(section => (
                   <li>
                     <a href={`#${this.slug(section.data.title)}`}>
+                      <i className="fa fa-fw fa-light fa-rhombus fa-xs"></i>
                       {section.data.title}
-                      <i className="fa fa-fw fa-light fa-arrow-right fa-sm"></i>
+                      {/* <i className="fa fa-fw fa-light fa-arrow-right fa-sm"></i> */}
                     </a>
                     {
                       Object.keys(data.collections)
@@ -56,13 +57,14 @@ export function render(this: Context, data: Data): any {
                             {data.collections[this.slug(section.data.title)].reverse().map(exp => (
                               <li>
                                 <a href={`#${this.slug(exp.data.title)}`}>
+                                  <i className="fa fa-fw fa-light fa-rhombus fa-xs"></i>
                                   {exp.data.title}
-                                  <i className="fa fa-fw fa-light fa-arrow-right fa-sm"></i>
+                                  {/* <i className="fa fa-fw fa-light fa-arrow-right fa-sm"></i> */}
                                 </a>
                               </li>
                             ))}
                           </ul>
-                        )
+                      )
                     }
                   </li>
                 ))

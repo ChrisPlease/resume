@@ -13,6 +13,6 @@ module.exports = {
     'Storybook',
     'SCSS',
     'Jenkins',
-    'Gitlab Pipelines'
+    'Gitlab Pipelines',
   ],
 }

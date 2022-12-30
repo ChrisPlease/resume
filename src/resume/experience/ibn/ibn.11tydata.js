@@ -9,6 +9,6 @@ module.exports = {
     'Jest',
     'Webpack (CRA)',
     'PostCSS',
-    'Node (NestJS)'
+    'Node (NestJS)',
   ],
 }

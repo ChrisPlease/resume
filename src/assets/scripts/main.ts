@@ -5,7 +5,10 @@ import '@fortawesome/fontawesome-pro/css/light.min.css'
 
 import { CollapsiblePanel } from './collapsible-panel'
 
-const panel = document.querySelector('.resume__toc')
+const panelEl = document.querySelector<HTMLElement>('.resume__toc')
 
-if (panel)
-  new CollapsiblePanel(panel as HTMLElement)
+if (panelEl !== null) {
+  const panel = new CollapsiblePanel(panelEl)
+
+  panel.init()
+}

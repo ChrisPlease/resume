@@ -5,7 +5,7 @@ title: Chris Pruyne
 <!doctype html>
 <html>
   <head>
-    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% set css %}
       {% include 'styles/main.css' %}
     {% endset %}
@@ -13,11 +13,12 @@ title: Chris Pruyne
       {{ css }}
     </style>
     <link rel="stylesheet" type="text/css" href="/assets/styles/main.css" />
+    <title>{{ title }}</title>
+    <script type="module" src="/assets/scripts/main.ts"></script>
   </head>
   <body>
     <main id="app">
       {{ content | safe }}
     </main>
-    <script type="module" src="/assets/scripts/main.ts"></script>
   </body>
 </html>

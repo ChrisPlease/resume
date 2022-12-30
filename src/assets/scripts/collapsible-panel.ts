@@ -1,54 +1,53 @@
 export class CollapsiblePanel {
-
-  private _el: HTMLElement
-  private _toggle: HTMLElement
-  private _content: HTMLElement
+  private readonly _el: HTMLElement
+  private readonly _toggle: HTMLElement
+  private readonly _content: HTMLElement
 
   private panelHeight = 0
   isOpen = false
 
-  constructor(element: HTMLElement) {
+  constructor (element: HTMLElement) {
     this._el = element
     this._toggle = this.getElement('[class*="toggle"]')
     this._content = this.getElement('[class*="content"]')
-
-    this.setPanelSize()
-
-    if (!this.isOpen) {
-        this.collapsePanel()
-    }
-
-    this.registerListeners()
   }
 
-  private getElement(getter: string): HTMLElement {
+  private getElement (getter: string): HTMLElement {
+    /* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */
     return this._el.querySelector(getter)!
   }
 
-  collapsePanel(): void {
+  collapsePanel (): void {
     this._content.style.height = '0px'
     this._toggle.classList.remove('is-open')
     this.isOpen = false
   }
 
-  expandPanel(): void {
+  expandPanel (): void {
     this._content.style.height = `${this.panelHeight}px`
     this._toggle.classList.add('is-open')
     this.isOpen = true
   }
 
-  togglePanel(): void {
-      if (this.isOpen)
-          this.collapsePanel()
-      else
-          this.expandPanel()
+  togglePanel (): void {
+    if (this.isOpen) { this.collapsePanel() } else { this.expandPanel() }
   }
 
-  setPanelSize(): void {
-      this.panelHeight = this._content.getBoundingClientRect().height
+  setPanelSize (): void {
+    this.panelHeight = this._content.getBoundingClientRect().height
   }
 
-  private registerListeners(): void {
-      this._toggle.addEventListener('click', () => this.togglePanel())
+  private registerListeners (): void {
+    this._toggle.addEventListener('click', () => this.togglePanel())
+  }
+
+  init (): void {
+    this.setPanelSize()
+
+    if (!this.isOpen) {
+      this.collapsePanel()
+    }
+
+    this.registerListeners()
   }
 }

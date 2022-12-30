@@ -3,12 +3,11 @@ import EleventyVitePlugin from '@11ty/eleventy-plugin-vite'
 import { UserConfig } from 'vite'
 import { daterange } from './shortcodes'
 
-export default function (eleventyConfig: Config) {
-
+export default function (eleventyConfig: Config): Partial<Config> {
   eleventyConfig.addWatchTarget(__dirname)
 
   eleventyConfig.addExtension(['11ty.tsx', '11ty.ts'], {
-    key: '11ty.js'
+    key: '11ty.js',
   })
 
   eleventyConfig.addShortcode('daterange', daterange)
@@ -34,19 +33,19 @@ export default function (eleventyConfig: Config) {
         rollupOptions: {
           external: ['@fortawesome/fontawesome-pro'],
           output: {
-            manualChunks(id) {
+            manualChunks (id) {
               if (id.includes('fontawesome')) {
                 return 'fonts'
               }
             },
 
             assetFileNames: 'assets/styles/[name].[hash].css',
-            // chunkFileNames: 'assets/scripts/[name].[hash].js',
-            entryFileNames: 'assets/scripts/[name].[hash].js'
-          }
+            chunkFileNames: 'assets/scripts/[name].[hash].js',
+            entryFileNames: 'assets/scripts/[name].[hash].js',
+          },
         },
-      }
-    }
+      },
+    },
   })
 
   return {
@@ -54,5 +53,5 @@ export default function (eleventyConfig: Config) {
       input: 'src',
       output: 'dist',
     },
-  };
+  }
 }

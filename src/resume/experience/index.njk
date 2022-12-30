@@ -13,7 +13,10 @@ date: '2002'
         {{ exp.data.title }}
       </h3>
       {% daterange exp.data.startDate, exp.data.endDate %}
-      <address>{{ exp.data.location}}</address>
+      <div class="experience-section__header-location">
+        <i class="fa fa-fw fa-xs fa-location-dot fa-light"></i>
+        <address>{{ exp.data.location}}</address>
+      </div>
     </div>
     <div class="experience-section__content">
       {{ exp.templateContent | safe }}

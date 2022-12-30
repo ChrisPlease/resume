@@ -1,20 +1,21 @@
-import h from 'vhtml';
+import h, { JSX } from 'vhtml'
 
+/* eslint-disable-next-line @typescript-eslint/no-empty-interface */
 interface Context {}
 
 interface Contact {
-  icon?: string;
-  to?: string;
-  key: string;
-  tag: 'a' | 'address';
-  value: string;
+  icon?: string
+  to?: string
+  key: string
+  tag: 'a' | 'address'
+  value: string
 }
 
 interface Data {
-  readonly contact: Contact[];
+  readonly contact: Contact[]
 }
 
-export function render(this: Context, { contact }: Data) {
+export function render (this: Context, { contact }: Data): JSX.Element {
   return (
     <dl class="contact-info">
       {
@@ -52,5 +53,5 @@ export function render(this: Context, { contact }: Data) {
       </dd>
     </dl>
 
-  );
+  )
 }

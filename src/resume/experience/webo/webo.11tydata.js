@@ -12,6 +12,6 @@ module.exports = {
     'gulp',
     'Grunt',
     'bower',
-    'PHP'
+    'PHP',
   ],
 }
