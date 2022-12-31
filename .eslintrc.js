@@ -5,6 +5,14 @@ module.exports = {
   },
   extends: 'standard-with-typescript',
   overrides: [
+    {
+      files: ['src/**/*.tsx'],
+      rules: {
+        '@typescript-eslint/consistent-type-assertions': ['warn', {
+          assertionStyle: 'as',
+        }],
+      },
+    },
   ],
   parserOptions: {
     project: ['./tsconfig.json'],

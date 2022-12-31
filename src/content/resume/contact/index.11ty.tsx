@@ -1,5 +1,9 @@
 import h, { JSX } from 'vhtml'
 
+export const Fragment = (
+  { children }: { children: string[] },
+): string => h(null as any, null, ...children)
+
 /* eslint-disable-next-line @typescript-eslint/no-empty-interface */
 interface Context {}
 
@@ -23,7 +27,7 @@ export function render (this: Context, { contact }: Data): JSX.Element {
           const Tag = item.tag as any
           const props = item.tag === 'a' ? { href: item.to } : {}
           return (
-            <div class="contact-info__item">
+            <Fragment>
               <dt class="contact-info__term">
                 <i className={`fa-light fa-fw fa-lg fa-${item.icon ?? ''}`}></i>
                 <span class="sr-only">
@@ -33,7 +37,7 @@ export function render (this: Context, { contact }: Data): JSX.Element {
               <dd class="contact-info__detail">
                 <Tag { ...props }>{item.value}</Tag>
               </dd>
-            </div>
+            </Fragment>
           )
         })
       }

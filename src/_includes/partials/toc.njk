@@ -1,0 +1,45 @@
+<div class="resume__toc">
+  <div class="resume__toc-header">
+    <button class="resume__toc-print" type="button" onclick="window.print()">
+      <i class="fa-fw fa-print fa-light fa-xl"></i>
+      <span class="sr-only">Print</span>
+    </button>
+    <button class="resume__toc-toggle" type="button">
+      <i class="fa fa-fw fa-list-tree fa-light fa-xl"></i>
+      <span class="sr-only">
+        View Table of Contents
+      </span>
+    </button>
+  </div>
+  <div class="resume__toc-content">
+    <h5 class="sr-only">
+      Table of Contents
+    </h5>
+    <nav>
+      <ul>
+        {% for section in collections.resume %}
+          {% set sectionSlug = section.data.title | slug %}
+          <li>
+            <a href="#{{ section.data.title | slug }}">
+              <i class="fa fa-fw fa-light fa-rhombus fa-xs"></i>
+              {{ section.data.title }}
+            </a>
+            {%- set subsections = collections[sectionSlug] -%}
+            {%- if subsections -%}
+              <ul>
+                {%- for sub in subsections -%}
+                  <li>
+                    <a href="#{{ sub.data.title | slug }}">
+                      <i class="fa fa-fw fa-light fa-rhombus fa-xs"></i>
+                      {{ sub.data.title }}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+</div>

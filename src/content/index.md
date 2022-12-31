@@ -1,6 +1,6 @@
 ---
 title: Chris Pruyne
-layout: layouts/base.njk
+layout: base.njk
 ---
 
 # Welcome to my site!

@@ -16,9 +16,15 @@ export default function (eleventyConfig: Config): Partial<Config> {
 
   eleventyConfig.addShortcode('daterange', daterange)
 
+  eleventyConfig.addFilter('subsection', (foo, bar) => {
+    console.log('foo', foo)
+    console.log('var', bar)
+  })
+
   eleventyConfig.setServerPassthroughCopyBehavior('copy')
-  eleventyConfig.addPassthroughCopy('src/assets/styles')
-  eleventyConfig.addPassthroughCopy('src/assets/scripts')
+  eleventyConfig.addPassthroughCopy({
+    'src/assets': 'assets',
+  })
 
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     serverOptions: {
@@ -56,7 +62,9 @@ export default function (eleventyConfig: Config): Partial<Config> {
 
   return {
     dir: {
-      input: 'src',
+      input: 'src/content',
+      includes: '../_includes',
+      layouts: '../_includes/layouts',
       output: 'dist',
     },
   }
