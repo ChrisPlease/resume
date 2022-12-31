@@ -19,39 +19,24 @@ export function render (this: Context, { contact }: Data): JSX.Element {
   return (
     <dl class="contact-info">
       {
-        contact.map(item => (
-          <div>
-            <dt>
-              <span>{item.key}</span>
-            </dt>
-            <dd>
-              {item.value}
-            </dd>
-          </div>
-        ))
+        contact.map(item => {
+          const Tag = item.tag as any
+          const props = item.tag === 'a' ? { href: item.to } : {}
+          return (
+            <div class="contact-info__item">
+              <dt class="contact-info__term">
+                <i className={`fa-light fa-fw fa-lg fa-${item.icon ?? ''}`}></i>
+                <span class="sr-only">
+                  {item.key}
+                </span>
+              </dt>
+              <dd class="contact-info__detail">
+                <Tag { ...props }>{item.value}</Tag>
+              </dd>
+            </div>
+          )
+        })
       }
-      <dt class="">
-        <i class="fa-light fa-fw fa-file-user"></i>
-        <span class="sr-only">Resume</span>
-      </dt>
-      <dd class="">
-        <a href="https://chrisplease.me">https://chrisplease.me</a>
-      </dd>
-      <dt>
-        <i class="fa-light fa-fw fa-envelope"></i>
-        <span class="sr-only">Email</span>
-      </dt>
-      <dd>
-        <a href="mailto:chris@chrisplease.me">chris@chrisplease.me</a>
-      </dd>
-      <dt>
-        <i class="fa-light fa-fw fa-location-dot"></i>
-        <span class="sr-only">Location</span>
-      </dt>
-      <dd>
-        <address>Denver, CO</address>
-      </dd>
     </dl>
-
   )
 }

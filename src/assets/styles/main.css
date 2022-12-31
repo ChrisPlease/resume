@@ -1,24 +1,6 @@
 @import "./resume.css";
 @import "./button.css";
 
-html {
-  height: 100vh;
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
 #app {
   display: flex;
   align-items: center;

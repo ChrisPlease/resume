@@ -7,15 +7,22 @@ date: '2002'
 {%- for exp in collections.experience | reverse -%}
   <div class="experience-section">
     <div class="experience-section__header">
-      <h3
-        id="{{ exp.data.title | slug }}"
-      >
+      <h3 id="{{ exp.data.title | slug }}">
         {{ exp.data.title }}
+        <a href="#{{ exp.data.title | slug }}">
+          <i class="fa-fw fa-light fa-sm fa-hashtag"></i>
+        </a>
       </h3>
-      {% daterange exp.data.startDate, exp.data.endDate %}
+      {% if exp.data.endDate %}
+        {% daterange "experience-section__header-time", exp.data.startDate, exp.data.endDate %}
+      {% else %}
+        Foooooooooooo
+      {% endif %}
       <div class="experience-section__header-location">
-        <i class="fa fa-fw fa-xs fa-location-dot fa-light"></i>
-        <address>{{ exp.data.location}}</address>
+        <address>
+          <i class="fa fa-fw fa-xs fa-location-dot fa-light"></i>
+          {{ exp.data.location}}
+        </address>
       </div>
     </div>
     <div class="experience-section__content">

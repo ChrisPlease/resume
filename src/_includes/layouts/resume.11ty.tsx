@@ -25,7 +25,7 @@ export function render (this: Context, data: Data): any {
       <h1 class="resume__title">{data.title}<span>{data.subtitle}</span></h1>
       <div class="resume__toc">
         <div className="resume__toc-header">
-          <button class="resume__toc-print" type={button}>
+          <button class="resume__toc-print" type={button} onclick="window.print()">
             <i className="fa-fw fa-print fa-light fa-xl"></i>
             <span className="sr-only">Print</span>
           </button>
