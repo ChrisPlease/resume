@@ -113,6 +113,7 @@ export interface Page {
 }
 
 interface Data {
+  title?: string
   collections: Record<string, Item[] | undefined>
 }
 
