@@ -27,7 +27,7 @@
             {%- set subsections = collections[sectionSlug] -%}
             {%- if subsections -%}
               <ul>
-                {%- for sub in subsections -%}
+                {%- for sub in subsections | reverse -%}
                   <li>
                     <a href="#{{ sub.data.title | slug }}">
                       <i class="fa fa-fw fa-light fa-rhombus fa-xs"></i>

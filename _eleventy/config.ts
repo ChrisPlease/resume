@@ -10,16 +10,7 @@ export default function (eleventyConfig: Config): Partial<Config> {
     key: '11ty.js',
   })
 
-  eleventyConfig.addExtension(['11tydata.ts'], {
-    key: '11tydata.js',
-  })
-
   eleventyConfig.addShortcode('daterange', daterange)
-
-  eleventyConfig.addFilter('subsection', (foo, bar) => {
-    console.log('foo', foo)
-    console.log('var', bar)
-  })
 
   eleventyConfig.setServerPassthroughCopyBehavior('copy')
   eleventyConfig.addPassthroughCopy({
