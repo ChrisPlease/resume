@@ -270,7 +270,7 @@ export interface Config {
   addJavascriptShortcode: (name: string, shortcode: AnyFunction<string>) => void
   addPairedShortcode: (
     name: string,
-    shortcode: <A>(content: string, ...args: A[]) => string,
+    shortcode: (content: string, ...args: any[]) => string,
   ) => void
 
   addJavaScriptFunction: (name: string, fn: AnyFunction<string>) => void
