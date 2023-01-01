@@ -1,0 +1,16 @@
+<dl class="contact-info">
+  {% for item in contact %}
+    <dt class="contact-info__term">
+      <i class="fa-light fa-fw fa-lg fa-{{item.icon}}"></i>
+      <span class="sr-only">{{ item.key }}</span>
+    </dt>
+    <dd class="contact-info__detail">
+      {% if item.tag === 'a' %}
+        <a href="{{ to }}">{{ item.value }}</a>
+      {% endif %}
+      {% if item.tag === 'address' %}
+        <address>{{ item.value }}</address>
+      {% endif %}
+    </dd>
+  {% endfor %}
+</dl>

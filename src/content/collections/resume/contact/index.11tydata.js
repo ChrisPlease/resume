@@ -1,7 +1,6 @@
 module.exports = {
   title: 'Contact Information',
-  tags: ['resume'],
-  date: '2000',
+  order: 0,
 
   contact: [{
     icon: 'file-user',

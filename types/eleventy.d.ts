@@ -114,6 +114,9 @@ export interface Page {
 
 interface Data {
   title?: string
+  order?: number
+  startDate?: Date
+  endDate?: Date
   collections: Record<string, Item[] | undefined>
 }
 
@@ -141,7 +144,7 @@ export interface Collection {
 
   getFilteredByTag: (tagName: string) => Item[]
 
-  getFilteredByGlob: (glob: string | string[]) => Item[]
+  getFilteredByGlob: <T = Item>(glob: string | string[]) => T[]
 }
 
 interface Renderer {

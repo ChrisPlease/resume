@@ -1,4 +1,3 @@
-
 Webolutions is a small marketing agency located in the Denver Metro Area. I 
 was responsible for designing and implementing custom WordPress themes, 
 plugins, and extensions for various client websites. Each site began with

@@ -1,9 +1,3 @@
----
-title: Introduction
-tags: resume
-date: '2001'
----
-
 I'm a Front End Engineer with over 10 years in the industry. Most 
 recently, I've been working as a Senior Front End Engineer, and 
 later Engineering Manager for Cofense. 

@@ -12,10 +12,22 @@ export default function (eleventyConfig: Config): Partial<Config> {
 
   eleventyConfig.addShortcode('daterange', daterange)
 
-  eleventyConfig.setServerPassthroughCopyBehavior('copy')
-  eleventyConfig.addPassthroughCopy({
-    'src/assets': 'assets',
+  eleventyConfig.addCollection('resume', (collectionApi) => {
+    return collectionApi.getFilteredByGlob(['src/content/collections/resume/**/*'])
+      .sort(
+        (a, b) => (a.data?.order ?? 1) - (b.data?.order ?? 0),
+      )
   })
+
+  eleventyConfig.addCollection('experience', (collectionApi) => {
+    return collectionApi.getFilteredByGlob(['src/content/collections/experience/**/*'])
+      .sort(
+        (a, b) => ((a.data?.startDate?.getTime() ?? 1) - (b.data?.startDate?.getTime() ?? 0)),
+      )
+  })
+
+  eleventyConfig.setServerPassthroughCopyBehavior('copy')
+  eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' })
 
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     serverOptions: {
@@ -37,6 +49,7 @@ export default function (eleventyConfig: Config): Partial<Config> {
           external: ['@fortawesome/fontawesome-pro'],
           output: {
             manualChunks (id) {
+              console.log(id)
               if (id.includes('fontawesome')) {
                 return 'fonts'
               }
