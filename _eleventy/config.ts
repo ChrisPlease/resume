@@ -49,12 +49,10 @@ export default function (eleventyConfig: Config): Partial<Config> {
           external: ['@fortawesome/fontawesome-pro'],
           output: {
             manualChunks (id) {
-              console.log(id)
               if (id.includes('fontawesome')) {
                 return 'fonts'
               }
             },
-
             assetFileNames: 'assets/styles/[name].[hash].css',
             chunkFileNames: 'assets/scripts/[name].[hash].js',
             entryFileNames: 'assets/scripts/[name].[hash].js',
