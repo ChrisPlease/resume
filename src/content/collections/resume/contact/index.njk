@@ -1,7 +1,9 @@
 <dl class="contact-info">
   {% for item in contact %}
     <dt class="contact-info__term">
-      <i class="fa-light fa-fw fa-lg fa-{{item.icon}}"></i>
+      <i
+        class="fa-{{ 'brands' if item.isBrand else 'light' }} fa-fw fa-lg fa-{{item.icon}}"
+      ></i>
       <span class="sr-only">{{ item.key }}</span>
     </dt>
     <dd class="contact-info__detail">

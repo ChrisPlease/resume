@@ -1,0 +1,10 @@
+{% import "macros/dropdown.njk" as dropdown %}
+
+<div class="toolbar screen-only">
+  {% include "partials/theme-toggle.njk" %}
+  <button class="resume__toc-print" type="button" onclick="window.print()">
+    <i class="fa-fw fa-print fa-light fa-xl"></i>
+    <span class="sr-only">Print</span>
+  </button>
+  {% include "partials/toc-dropdown.njk" %}
+</div>

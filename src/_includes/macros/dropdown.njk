@@ -1,20 +1,18 @@
-<div class="resume__toc">
-  <div class="resume__toc-header">
-    {% include "partials/theme-toggle.njk" %}
-    <button class="resume__toc-print" type="button" onclick="window.print()">
-      <i class="fa-fw fa-print fa-light fa-xl"></i>
-      <span class="sr-only">Print</span>
-    </button>
-    <button class="resume__toc-toggle" type="button">
-      <i class="fa fa-fw fa-list-tree fa-light fa-xl"></i>
-      <span class="sr-only">
-        View Table of Contents
-      </span>
-    </button>
-  </div>
-  <div class="resume__toc-content">
+{% macro trigger(label, icon, class = '', srOnly = false) %}
+  <button data-attribute="toggle" class="{{ class }}">
+    {% if icon %}
+      <i class="fa-fw fa-light fa-xl fa-{{ icon }}"></i>
+    {% endif %}
+    <span {% if srOnly %} class="sr-only" {% endif %}>
+      {{ label }}
+    </span>
+  </button>
+{% endmacro %}
+
+{% macro content(collections, title = '', class = '') %}
+  <div data-attribute="content" class="{{ class }}">
     <h5 class="sr-only">
-      Table of Contents
+      {{ title }}
     </h5>
     <nav>
       <ul>
@@ -22,7 +20,7 @@
           {% set sectionSlug = section.data.title | slug %}
           <li>
             <a href="#{{ section.data.title | slug }}">
-              <i class="fa fa-fw fa-light fa-rhombus fa-xs"></i>
+              <i class="fa-fw fa-light fa-rhombus fa-xs"></i>
               {{ section.data.title }}
             </a>
             {%- set subsections = collections[sectionSlug] -%}
@@ -31,7 +29,7 @@
                 {%- for sub in subsections | reverse -%}
                   <li>
                     <a href="#{{ sub.data.title | slug }}">
-                      <i class="fa fa-fw fa-light fa-rhombus fa-xs"></i>
+                      <i class="fa-fw fa-light fa-rhombus fa-xs"></i>
                       {{ sub.data.title }}
                     </a>
                   </li>
@@ -43,4 +41,4 @@
       </ul>
     </nav>
   </div>
-</div>
+{% endmacro %}

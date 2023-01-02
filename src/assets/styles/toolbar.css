@@ -1,0 +1,53 @@
+.toolbar {
+  display: flex;
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  align-items: center;
+  justify-content: flex-end;
+  background: rgb(var(--bg-alt-color));
+  height: 60px;
+  padding: 0 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(var(--shadow-color), 0.15);
+}
+
+.toolbar > *:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.toc-dropdown__content {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  overflow: hidden;
+  background: rgb(var(--bg-alt-color));
+  box-shadow: 0 2px 4px rgba(var(--shadow-color), 0.15);
+}
+
+.toc-dropdown__content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.toc-dropdown__content ul ul a {
+  padding-left: 2rem;
+}
+
+.toc-dropdown__content a {
+  text-decoration: none;
+  display: block;
+  padding: 0.25rem 1rem;
+  color: rgb(var(--text-color));
+  background: rgb(var(--bg-alt-color));
+  transition: color 200ms linear, background 200ms linear;
+}
+
+.toc-dropdown__content a:hover,
+.toc-dropdown__content a:active,
+.toc-dropdown__content a:focus {
+  color: rgba(var(--text-color), 0.7);
+  background: rgb(var(--bg-color));
+}

@@ -1,5 +1,7 @@
 type Theme = 'dark' | 'light'
 
+const mql: MediaQueryList = window.matchMedia('(prefers-color-scheme: light)')
+
 export function init (): void {
   const theme = determineInitTheme()
   /* eslint-disable-next-line */
@@ -10,14 +12,21 @@ export function init (): void {
     document.documentElement.setAttribute('data-theme', 'dark')
   }
   btn.addEventListener('change', handleToggle)
+  mql.addEventListener('change', (e: MediaQueryListEvent) => {
+    if (e.matches) {
+      btn.checked = false
+      setLightTheme()
+    } else {
+      btn.checked = true
+      setDarkTheme()
+    }
+  })
 }
 
 function determineInitTheme (): Theme {
   const storedTheme: Theme | null = <Theme>localStorage.getItem('theme')
 
   if (storedTheme) return storedTheme
-
-  const mql: MediaQueryList = window.matchMedia('(prefers-color-scheme: light)')
 
   if (mql.matches) { return 'light' } else { return 'dark' }
 }
@@ -26,10 +35,18 @@ function handleToggle (e: Event): void {
   const input = <HTMLInputElement>e.target
 
   if (!input.checked) {
-    localStorage.setItem('theme', 'light')
-    document.documentElement.removeAttribute('data-theme')
+    setLightTheme()
   } else {
-    localStorage.setItem('theme', 'dark')
-    document.documentElement.setAttribute('data-theme', 'dark')
+    setDarkTheme()
   }
+}
+
+function setLightTheme (): void {
+  localStorage.setItem('theme', 'light')
+  document.documentElement.removeAttribute('data-theme')
+}
+
+function setDarkTheme (): void {
+  localStorage.setItem('theme', 'dark')
+  document.documentElement.setAttribute('data-theme', 'dark')
 }

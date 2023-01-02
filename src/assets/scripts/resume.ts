@@ -1,11 +1,13 @@
 
 import { CollapsiblePanel } from './collapsible-panel'
 
-const panelEl = document.querySelector<HTMLElement>('.resume__toc')
+const panelEls = document.querySelectorAll<HTMLElement>('[data-attribute="dropdown"]')
 
-if (panelEl !== null) {
-  /* eslint-disable-next-line */
-  const panel = new CollapsiblePanel(panelEl)
+if (panelEls !== null) {
+  panelEls.forEach(p => {
+    /* eslint-disable-next-line */
+    const panel = new CollapsiblePanel(p)
 
-  // panel.init()
+    panel.init()
+  })
 }

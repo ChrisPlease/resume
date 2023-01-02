@@ -9,3 +9,9 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+@media print {
+  .screen-only {
+    display: none !important;
+  }
+}

@@ -1,6 +1,6 @@
 {% extends "layouts/base.njk" %}
 {% set toc %}
-  {% include 'partials/toc.njk' %}
+  {% include 'partials/toolbar.njk' %}
 {% endset %}
 
 {% block scripts %}
@@ -8,12 +8,12 @@
 {% endblock %}
 
 {% block content %}
+{{ toc | safe }}
 <div class="resume">
   <h1 class="resume__title">
     {{ title }}
     <span>{{ subtitle }}</span>
   </h1>
-  {{ toc | safe }}
   <div class="resume__content">
     {{ content | safe }}
   </div>

@@ -1,0 +1,16 @@
+{% import "macros/dropdown.njk" as dropdown %}
+
+<div data-attribute="dropdown" class="toc-dropdown">
+  {{-
+    dropdown.trigger(
+      'Table of Contents',
+      'list-tree',
+      'toc-dropdown__toggle',
+      true
+    )
+  -}}
+
+  {{-
+    dropdown.content(collections, 'Table of Contents', 'toc-dropdown__content')
+  -}}
+</div>

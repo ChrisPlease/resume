@@ -8,8 +8,8 @@ export class CollapsiblePanel {
 
   constructor (element: HTMLElement) {
     this._el = element
-    this._toggle = this.getElement('[class*="toggle"]')
-    this._content = this.getElement('[class*="content"]')
+    this._toggle = this.getElement('[data-attribute="toggle"]')
+    this._content = this.getElement('[data-attribute="content"]')
   }
 
   private getElement (getter: string): HTMLElement {

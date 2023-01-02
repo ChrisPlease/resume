@@ -5,11 +5,11 @@ layout: resume.njk
 permalink: /resume/
 ---
 {% for section in collections.resume %}
-  <div class="resume__section">
-    <h2 id="{{ section.data.title | slug }}">
+  <div class="resume-section {{ section.data.title | slug }}">
+    <h2 class="resume-section__title" id="{{ section.data.title | slug }}">
       {{ section.data.title }}
       <a href="#{{ section.data.title | slug }}">
-        <i class="fa-fw fa-lg fa-light fa-hashtag"></i>
+        <i class="fa-fw fa-light fa-hashtag"></i>
       </a>
     </h2>
     {{ section.templateContent | safe }}
