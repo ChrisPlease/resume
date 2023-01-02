@@ -6,7 +6,7 @@
     </dt>
     <dd class="contact-info__detail">
       {% if item.tag === 'a' %}
-        <a href="{{ to }}">{{ item.value }}</a>
+        <a href="{{ item.to }}">{{ item.value }}</a>
       {% endif %}
       {% if item.tag === 'address' %}
         <address>{{ item.value }}</address>
