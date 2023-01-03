@@ -10,6 +10,7 @@
   padding: 0 1rem;
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(var(--shadow-color), 0.15);
+  z-index: 1000;
 }
 
 .toolbar > *:not(:first-child) {
@@ -48,6 +49,17 @@
 .toc-dropdown__content a:hover,
 .toc-dropdown__content a:active,
 .toc-dropdown__content a:focus {
-  color: rgba(var(--text-color), 0.7);
-  background: rgb(var(--bg-color));
+  color: rgba(var(--text-color), 0.9);
+  background: rgba(var(--text-color), 0.1);
+}
+
+.toc-dropdown__content a .fa-right {
+  transition: transform 100ms linear;
+  transform: translateX(0rem);
+}
+
+.toc-dropdown__content a:hover .fa-right,
+.toc-dropdown__content a:active .fa-right,
+.toc-dropdown__content a:focus .fa-right {
+  transform: translateX(0.25rem);
 }

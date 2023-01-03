@@ -14,11 +14,11 @@ export function init (): void {
   btn.addEventListener('change', handleToggle)
   mql.addEventListener('change', (e: MediaQueryListEvent) => {
     if (e.matches) {
-      btn.checked = false
       setLightTheme()
+      btn.checked = false
     } else {
-      btn.checked = true
       setDarkTheme()
+      btn.checked = true
     }
   })
 }
@@ -34,11 +34,7 @@ function determineInitTheme (): Theme {
 function handleToggle (e: Event): void {
   const input = <HTMLInputElement>e.target
 
-  if (!input.checked) {
-    setLightTheme()
-  } else {
-    setDarkTheme()
-  }
+  !input.checked ? setLightTheme() : setDarkTheme()
 }
 
 function setLightTheme (): void {

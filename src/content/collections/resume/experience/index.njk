@@ -4,9 +4,9 @@ order: 2
 ---
 
 {%- for exp in collections.experience | reverse -%}
-  <div class="experience-section">
-    <div class="experience-section__header">
-      <h3 class="experience-section__title" id="{{ exp.data.title | slug }}">
+  <article class="experience-section">
+    <header class="experience-section__header">
+      <h3 class="experience-section__header-title" id="{{ exp.data.title | slug }}">
         {{ exp.data.title }}
         <a href="#{{ exp.data.title | slug }}">
           <i class="fa-fw fa-light fa-sm fa-hashtag"></i>
@@ -19,17 +19,17 @@ order: 2
           {{ exp.data.location}}
         </address>
       </div>
-    </div>
+    </header>
     <div class="experience-section__content">
       {{ exp.templateContent | safe }}
     </div>
-    <div class="experience-section__tech-stack">
-      <h4>Technologies</h4>
+    <aside class="experience-section__tech-stack">
+      <h4 class="sr-only">Technologies</h4>
       <ul>
         {%- for item in exp.data.stack -%}
           <li>{{ item }}</li>
         {%- endfor -%}
       </ul>
-    </div>
-  </div>
+    </aside>
+  </article>
 {%- endfor -%}

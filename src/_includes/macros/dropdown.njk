@@ -20,8 +20,9 @@
           {% set sectionSlug = section.data.title | slug %}
           <li>
             <a href="#{{ section.data.title | slug }}">
-              <i class="fa-fw fa-light fa-rhombus fa-xs"></i>
+              <i class="fa-fw fa-light fa-hashtag fa-sm"></i>
               {{ section.data.title }}
+              <i class="fa-fw fa-light fa-right fa-xs"></i>
             </a>
             {%- set subsections = collections[sectionSlug] -%}
             {%- if subsections -%}
@@ -29,8 +30,9 @@
                 {%- for sub in subsections | reverse -%}
                   <li>
                     <a href="#{{ sub.data.title | slug }}">
-                      <i class="fa-fw fa-light fa-rhombus fa-xs"></i>
+                      <i class="fa-fw fa-light fa-hashtag fa-sm"></i>
                       {{ sub.data.title }}
+                      <i class="fa-fw fa-light fa-right fa-xs"></i>
                     </a>
                   </li>
                 {%- endfor -%}

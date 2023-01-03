@@ -18,7 +18,7 @@
   color: rgba(var(--text-color), 0.6);
 }
 
-.resume-section:not(.contact-information, :last-child) {
+.resume-section:not(:last-child) {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid rgba(var(--text-color), 0.4);
@@ -26,6 +26,7 @@
 
 .resume-section__title {
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .resume-section__title:hover a {
@@ -37,26 +38,57 @@
   display: none;
 }
 
+.experience-section {
+  break-inside: avoid;
+  width: 100%;
+}
+
 .experience-section:not(:last-child) {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid rgba(var(--text-color), 0.2);
 }
 
-.experience-section__title {
+.experience-section__header-title {
   position: relative;
 }
 
-.experience-section__title:hover a {
+.experience-section__header-title:hover a {
   display: inline;
   position: absolute;
 }
 
-.experience-section__title a {
+.experience-section__header-title a {
   display: none;
 }
+.experience-section__header {
+  display: grid;
+  align-items: baseline;
+  grid-row-gap: 0.25rem;
+  grid-template:
+    "title title" auto
+    "location date" auto / minmax(min-content, max-content) auto;
+}
 
-@media print,  (min-width: 800px) {
+.experience-section__header-title {
+  grid-area: title;
+}
+
+.experience-section__header-time {
+  grid-area: date;
+}
+.experience-section__header-time::before {
+  content: "//";
+  margin: 0 0.25rem;
+  color: rgba(var(--text-color), 0.4);
+}
+
+.experience-section__header-location {
+  grid-area: location;
+  display: flex;
+}
+
+@media print, (min-width: 800px) {
   .resume {
     margin-top: 32px;
     max-width: auto;
@@ -73,5 +105,26 @@
     margin-left: 1rem;
     padding-left: 1rem;
     border-left: 2px solid rgba(var(--text-color), 0.6);
+  }
+
+  .experience-section {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template:
+      "header stack" auto
+      "content stack" auto / 1fr 300px;
+  }
+
+  .experience-section__header {
+    grid-area: header;
+  }
+
+  .experience-section__content {
+    grid-area: content;
+  }
+
+  .experience-section__tech-stack {
+    grid-area: stack;
+    align-self: center;
   }
 }
