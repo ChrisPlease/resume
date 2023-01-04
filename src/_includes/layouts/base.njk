@@ -1,3 +1,7 @@
+{% set toolbar %}
+  {% include "partials/toolbar.njk" %}
+{% endset %}
+
 <!doctype html>
 <html>
   <head>
@@ -15,6 +19,7 @@
     {% block scripts %}{% endblock %}
   </head>
   <body>
+    {{ toolbar | safe }}
     <main id="app">
       {% block content %}
         {{ content | safe }}

@@ -10,21 +10,11 @@
 }
 
 @media print {
-  --bg-color: 255, 255, 255;
-  --text-color: 36, 36, 36;
-  --link-color: 12, 123, 321;
-  --track-color: 200, 200, 200;
-}
-
-@media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: 36, 36, 36;
-    --bg-alt-color: 32, 32, 32;
-    --text-color: 254, 254, 254;
+    --bg-color: 255, 255, 255;
+    --text-color: 36, 36, 36;
     --link-color: 12, 123, 321;
-    --track-color: 100, 100, 100;
-    --button-color: 26, 26, 26;
-    --button-hover-color: 20, 20, 20;
+    --track-color: 200, 200, 200;
   }
 }
 

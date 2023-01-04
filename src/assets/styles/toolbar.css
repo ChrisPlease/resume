@@ -26,6 +26,22 @@
   overflow: hidden;
   background: rgb(var(--bg-alt-color));
   box-shadow: 0 2px 4px rgba(var(--shadow-color), 0.15);
+  transform-origin: 50% 0%;
+  transform: scale(1, 0);
+  will-change: transform;
+}
+
+.toc-dropdown__content nav {
+  transform-origin: 50% 0%;
+  will-change: transform;
+}
+
+.toc-dropdown__content.is-open {
+  transform: scale(1, 1);
+}
+
+.toc-dropdown__content.is-open nav {
+  transform: scale(1, 1);
 }
 
 .toc-dropdown__content ul {
@@ -42,7 +58,7 @@
   display: block;
   padding: 0.25rem 1rem;
   color: rgb(var(--text-color));
-  background: rgb(var(--bg-alt-color));
+  /* background: rgb(var(--bg-alt-color)); */
   transition: color 200ms linear, background 200ms linear;
 }
 
