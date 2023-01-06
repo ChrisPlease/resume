@@ -1,5 +1,6 @@
 import { Config } from '../types/eleventy'
 import EleventyVitePlugin from '@11ty/eleventy-plugin-vite'
+import { create } from 'ts-node'
 import { UserConfig } from 'vite'
 import { daterange } from './shortcodes'
 
@@ -8,6 +9,23 @@ export default function (eleventyConfig: Config): Partial<Config> {
 
   eleventyConfig.addExtension(['11ty.tsx', '11ty.ts'], {
     key: '11ty.js',
+  })
+
+  eleventyConfig.addDataExtension('ts', {
+    parser: (fileContents: string, path: string) => {
+      const compiler = create({
+        files: true,
+        swc: true,
+        compilerOptions: {
+          module: 'commonjs',
+        },
+      })
+
+      const compiled = compiler.compile(fileContents, path)
+
+      /* eslint-disable-next-line no-eval */
+      return eval?.(`const exports = {}; ${compiled}`)
+    },
   })
 
   eleventyConfig.addShortcode('daterange', daterange)

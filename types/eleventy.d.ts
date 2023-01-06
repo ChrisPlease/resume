@@ -240,7 +240,16 @@ export interface Config {
     */
   addWatchTarget: (path: string) => void
 
-  addExtension: (extensions: string | string[], { key: string }) => any
+  addExtension: (extensions: string | string[], { key: string }) => void
+
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  addDataExtension: (
+    extensionList: string,
+    options: {
+      parser: (fileContents: string, path: string) => any
+    },
+  ) => any
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   addCollection: (
     name: string,
@@ -272,10 +281,13 @@ export interface Config {
   addNunjucksShortcode: (name: string, shortcode: AnyFunction<string>) => void
   addHandlebarsShortcode: (name: string, shortcode: AnyFunction<string>) => void
   addJavascriptShortcode: (name: string, shortcode: AnyFunction<string>) => void
+
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   addPairedShortcode: (
     name: string,
     shortcode: (content: string, ...args: any[]) => string,
   ) => void
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   addJavaScriptFunction: (name: string, fn: AnyFunction<string>) => void
 

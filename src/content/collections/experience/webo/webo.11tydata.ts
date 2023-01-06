@@ -1,4 +1,6 @@
-module.exports = {
+import { ExperienceMeta } from '../../../../types/ExperienceMeta'
+
+((): ExperienceMeta => ({
   title: 'Webolutions',
   startDate: new Date(2013, 9, 1),
   endDate: new Date(2015, 9, 1),
@@ -12,4 +14,5 @@ module.exports = {
     'bower',
     'PHP',
   ],
-}
+})
+)()

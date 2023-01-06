@@ -4,7 +4,7 @@ export const daterange = (className: string, startDate: Date, endDate?: Date): s
   const start = formatDate(startDate, { month: 'short', year: 'numeric' })
 
   const tmpEndDate = endDate ?? new Date()
-  const end = endDate !== undefined ? formatDate(tmpEndDate, { month: 'short', year: 'numeric' }) : 'Present'
+  const end = endDate ? formatDate(tmpEndDate, { month: 'short', year: 'numeric' }) : 'Present'
 
   const timeDiff = (tmpEndDate.getTime() - startDate.getTime()) / 1000
   const timeDiffInDays = Math.round(timeDiff / 60 / 60 / 24)

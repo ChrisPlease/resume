@@ -101,6 +101,6 @@ export class CollapsiblePanel {
     this._toggle.setAttribute('aria-haspopup', 'menu')
     this._toggle.setAttribute('aria-expanded', 'false')
 
-    this._toggle.addEventListener('click', (e) => this.togglePanel(e), false)
+    this._toggle.addEventListener('click', (e) => { this.togglePanel(e) }, false)
   }
 }

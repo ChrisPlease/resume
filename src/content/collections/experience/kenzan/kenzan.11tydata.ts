@@ -1,4 +1,6 @@
-module.exports = {
+import type { ExperienceMeta } from '../../../../types/ExperienceMeta'
+
+((): ExperienceMeta => ({
   title: 'Kenzan',
   startDate: new Date(2015, 10, 1),
   endDate: new Date(2018, 7, 31),
@@ -13,4 +15,5 @@ module.exports = {
     'gulp',
     'Jenkins',
   ],
-}
+})
+)()

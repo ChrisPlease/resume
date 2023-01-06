@@ -4,7 +4,7 @@ const mql: MediaQueryList = window.matchMedia('(prefers-color-scheme: light)')
 
 export function init (): void {
   const theme = determineInitTheme()
-  /* eslint-disable-next-line */
+  /* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */
   const btn = document.querySelector<HTMLInputElement>('#theme-toggle')!
 
   if (theme === 'dark') {

@@ -5,7 +5,6 @@ const panelEls = document.querySelectorAll<HTMLElement>('[data-attribute="dropdo
 
 if (panelEls !== null) {
   panelEls.forEach(p => {
-    /* eslint-disable-next-line */
     const panel = new CollapsiblePanel(p)
 
     panel.init()

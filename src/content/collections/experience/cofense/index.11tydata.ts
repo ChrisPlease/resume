@@ -1,16 +1,18 @@
-module.exports = {
+import type { ExperienceMeta } from '../../../../types/ExperienceMeta';
+
+((): ExperienceMeta => ({
   title: 'Cofense',
-  isRemote: true,
   startDate: new Date(2019, 3, 8),
   location: 'Leesburg, VA',
   stack: [
     'Vue',
-    'TypeScript (SFC & TSX)',
+    'Typescript',
     'Jest',
-    'Webpack (Vue CLI)',
+    'webpack',
+    'Rollup',
     'Storybook',
     'SCSS',
     'Jenkins',
     'Gitlab Pipelines',
   ],
-}
+}))()
