@@ -1,0 +1,141 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <style>
+      @media screen, print {
+  :root {
+    --bg-color: 245, 245, 245;
+    --bg-alt-color: 240, 240, 240;
+    --text-color: 36, 36, 36;
+    --link-color: 12, 123, 255;
+    --track-color: 200, 200, 200;
+    --button-color: 255, 255, 255;
+    --button-hover-color: 249, 249, 249;
+    --shadow-color: 10, 10, 10;
+  }
+}
+
+@media screen {
+  [data-theme="dark"] {
+    --bg-color: 36, 36, 36;
+    --bg-alt-color: 32, 32, 32;
+    --text-color: 254, 254, 254;
+    --link-color: 12, 123, 255;
+    --track-color: 100, 100, 100;
+    --button-color: 26, 26, 26;
+    --button-hover-color: 20, 20, 20;
+  }
+}
+
+@page {
+  margin: 0.5in;
+}
+
+@page :first {
+  margin: 0;
+}
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+
+  color: rgba(var(--text-color), .85);
+  background:
+    no-repeat 0/cover
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, .125),
+      rgba(255, 0, 0, 0)
+    ),
+    rgb(var(--bg-color))
+
+}
+
+html {
+  height: 100vh;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+code {
+  font-size: 80%;
+  border: 1px solid rgba(var(--text-color), 0.5);
+  border-radius: 5px;
+  padding: 0.125rem;
+}
+
+a:link,
+a:visited {
+  color: rgb(var(--link-color));
+}
+
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/styles/favicon.87206af2.css">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAhUlEQVRoQ+3SsQ0AIAzEwGT/pRniChTJ9H6Bzc7xs8fvPz3gd8EKVAAN9IVQIOMVYIU4UAEUyHgFWCEOVAAFMl4BVogDFUCBjFeAFeJABVAg4xVghThQARTIeAVYIQ5UAAUyXgFWiAMVQIGMV4AV4kAFUCDjFWCFOFABFMh4BVghDpwv8ACa9QAx8lijdQAAAABJRU5ErkJggg==">
+    
+    <title>Chris Pruyne</title>
+    
+    
+    <script type="module" crossorigin src="/assets/scripts/fonts.ec082ce4.js"></script>
+    <script type="module" crossorigin src="/assets/scripts/main.70e287a0.js"></script>
+    <link rel="stylesheet" href="/assets/styles/main.15797ac1.css">
+  </head>
+  <body>
+    
+  <div class="toolbar screen-only">
+  
+  <label class="theme-toggle" for="theme-toggle">
+  <span class="sr-only">Toggle Theme</span>
+  <i class="fa-sun fa-light fa-fw fa-lg"></i>
+  <input class="theme-toggle__input" id="theme-toggle" type="checkbox"></input>
+  <span class="theme-toggle__faux-input"></span>
+  <i class="fa-moon fa-light fa-fw fa-lg"></i>
+</label>
+
+</div>
+
+
+    <main id="app">
+      
+        <p><i class="fa-light fa-hand-wave fa-3x fa-shake"></i></p>
+<h1>Welcome to my site!</h1>
+<p>Send me a <a href="mailto:chris@chrisplease.me">message</a>, or check out my <a href="/resume/">resume</a>.</p>
+
+      
+    </main>
+  </body>
+</html>

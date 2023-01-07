@@ -1,0 +1,552 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <style>
+      @media screen, print {
+  :root {
+    --bg-color: 245, 245, 245;
+    --bg-alt-color: 240, 240, 240;
+    --text-color: 36, 36, 36;
+    --link-color: 12, 123, 255;
+    --track-color: 200, 200, 200;
+    --button-color: 255, 255, 255;
+    --button-hover-color: 249, 249, 249;
+    --shadow-color: 10, 10, 10;
+  }
+}
+
+@media screen {
+  [data-theme="dark"] {
+    --bg-color: 36, 36, 36;
+    --bg-alt-color: 32, 32, 32;
+    --text-color: 254, 254, 254;
+    --link-color: 12, 123, 255;
+    --track-color: 100, 100, 100;
+    --button-color: 26, 26, 26;
+    --button-hover-color: 20, 20, 20;
+  }
+}
+
+@page {
+  margin: 0.5in;
+}
+
+@page :first {
+  margin: 0;
+}
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+
+  color: rgba(var(--text-color), .85);
+  background:
+    no-repeat 0/cover
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, .125),
+      rgba(255, 0, 0, 0)
+    ),
+    rgb(var(--bg-color))
+
+}
+
+html {
+  height: 100vh;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+code {
+  font-size: 80%;
+  border: 1px solid rgba(var(--text-color), 0.5);
+  border-radius: 5px;
+  padding: 0.125rem;
+}
+
+a:link,
+a:visited {
+  color: rgb(var(--link-color));
+}
+
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/styles/favicon.87206af2.css">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAhUlEQVRoQ+3SsQ0AIAzEwGT/pRniChTJ9H6Bzc7xs8fvPz3gd8EKVAAN9IVQIOMVYIU4UAEUyHgFWCEOVAAFMl4BVogDFUCBjFeAFeJABVAg4xVghThQARTIeAVYIQ5UAAUyXgFWiAMVQIGMV4AV4kAFUCDjFWCFOFABFMh4BVghDpwv8ACa9QAx8lijdQAAAABJRU5ErkJggg==">
+    
+    <title>Chris Pruyne</title>
+    
+    
+  
+
+    <script type="module" crossorigin src="/assets/scripts/index.a1cc902f.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/scripts/fonts.ec082ce4.js">
+    <link rel="modulepreload" crossorigin href="/assets/scripts/main.70e287a0.js">
+    <link rel="stylesheet" href="/assets/styles/main.15797ac1.css">
+  </head>
+  <body>
+    
+  <div class="toolbar screen-only">
+  
+    <button class="resume__toc-print" type="button" onclick="window.print()">
+      <i class="fa-fw fa-print fa-light fa-xl"></i>
+      <span class="sr-only">Print</span>
+    </button>
+    
+
+<div data-attribute="dropdown" class="toc-dropdown">
+  <button data-attribute="toggle" class="toc-dropdown__toggle">
+    
+      <i class="fa-fw fa-light fa-xl fa-list-tree"></i>
+    
+    <span  class="sr-only" >
+      Table of Contents
+    </span>
+  </button>
+
+  <div data-attribute="content" class="toc-dropdown__content">
+    <h5 class="sr-only">
+      Table of Contents
+    </h5>
+    <nav>
+      <ul>
+        
+          
+          <li>
+            <a href="#contact-information">
+              <i class="fa-fw fa-light fa-hashtag fa-sm"></i>
+              Contact Information
+              <i class="fa-fw fa-light fa-right fa-xs"></i>
+            </a></li>
+          
+          <li>
+            <a href="#introduction">
+              <i class="fa-fw fa-light fa-hashtag fa-sm"></i>
+              Introduction
+              <i class="fa-fw fa-light fa-right fa-xs"></i>
+            </a></li>
+          
+          <li>
+            <a href="#experience">
+              <i class="fa-fw fa-light fa-hashtag fa-sm"></i>
+              Experience
+              <i class="fa-fw fa-light fa-right fa-xs"></i>
+            </a><ul><li>
+                    <a href="#cofense">
+                      <i class="fa-fw fa-light fa-hashtag fa-sm"></i>
+                      Cofense
+                      <i class="fa-fw fa-light fa-right fa-xs"></i>
+                    </a>
+                  </li><li>
+                    <a href="#ideas-by-nature">
+                      <i class="fa-fw fa-light fa-hashtag fa-sm"></i>
+                      Ideas By Nature
+                      <i class="fa-fw fa-light fa-right fa-xs"></i>
+                    </a>
+                  </li><li>
+                    <a href="#kenzan">
+                      <i class="fa-fw fa-light fa-hashtag fa-sm"></i>
+                      Kenzan
+                      <i class="fa-fw fa-light fa-right fa-xs"></i>
+                    </a>
+                  </li><li>
+                    <a href="#webolutions">
+                      <i class="fa-fw fa-light fa-hashtag fa-sm"></i>
+                      Webolutions
+                      <i class="fa-fw fa-light fa-right fa-xs"></i>
+                    </a>
+                  </li></ul></li></ul>
+    </nav>
+  </div>
+</div>
+
+  
+  <label class="theme-toggle" for="theme-toggle">
+  <span class="sr-only">Toggle Theme</span>
+  <i class="fa-sun fa-light fa-fw fa-lg"></i>
+  <input class="theme-toggle__input" id="theme-toggle" type="checkbox"></input>
+  <span class="theme-toggle__faux-input"></span>
+  <i class="fa-moon fa-light fa-fw fa-lg"></i>
+</label>
+
+</div>
+
+
+    <main id="app">
+      
+<div class="resume">
+  <h1 class="resume__title">
+    Chris Pruyne
+    <span>Software Engineer</span>
+  </h1>
+  <div class="resume__content">
+    
+
+  <section class="resume-section contact-information">
+    <h2 class="resume-section__title sr-only" id="contact-information">
+      Contact Information
+      <a href="#contact-information">
+        <i class="fa-fw fa-light fa-hashtag"></i>
+      </a>
+    </h2>
+    <dl class="contact-info">
+  
+    <dt class="contact-info__term">
+      <i
+        class="fa-light fa-fw fa-lg fa-file-user"
+      ></i>
+      <span class="sr-only">Resume</span>
+    </dt>
+    <dd class="contact-info__detail">
+      
+        
+          <a href="https://chrisplease.me/resume">https://chrisplease.me/resume</a>
+        
+      
+      
+    </dd>
+  
+    <dt class="contact-info__term">
+      <i
+        class="fa-light fa-fw fa-lg fa-envelope"
+      ></i>
+      <span class="sr-only">Email</span>
+    </dt>
+    <dd class="contact-info__detail">
+      
+        
+          <a href="mailto:chris@chrisplease.me">chris@chrisplease.me</a>
+        
+      
+      
+    </dd>
+  
+    <dt class="contact-info__term">
+      <i
+        class="fa-brands fa-fw fa-lg fa-github-alt"
+      ></i>
+      <span class="sr-only">Github</span>
+    </dt>
+    <dd class="contact-info__detail">
+      
+        
+          <a href="https://github.com/ChrisPlease">https://github.com/ChrisPlease</a>
+        
+      
+      
+    </dd>
+  
+    <dt class="contact-info__term">
+      <i
+        class="fa-brands fa-fw fa-lg fa-linkedin"
+      ></i>
+      <span class="sr-only">LinkedIn</span>
+    </dt>
+    <dd class="contact-info__detail">
+      
+        
+          <a href="https://linkedin.com/in/ChrisPlease">https://linkedin.com/in/ChrisPlease</a>
+        
+      
+      
+    </dd>
+  
+    <dt class="contact-info__term">
+      <i
+        class="fa-light fa-fw fa-lg fa-location-dot"
+      ></i>
+      <span class="sr-only">Location</span>
+    </dt>
+    <dd class="contact-info__detail">
+      
+      
+        <address>Denver, CO</address>
+      
+    </dd>
+  
+</dl>
+
+  </section>
+
+
+  <section class="resume-section introduction">
+    <h2 class="resume-section__title " id="introduction">
+      Introduction
+      <a href="#introduction">
+        <i class="fa-fw fa-light fa-hashtag"></i>
+      </a>
+    </h2>
+    <p>Dedicated and passionate front end engineer with over 10 years
+experience in the industry. Experience in working with teams
+of all sizes. Specializing in writing semantic HTML, clean CSS,
+and highly reusable components in modern front end applications.
+I have a keen eye for semantic HTML,
+<span class="screen-only"><code>a11y</code></span><span class="print-only">
+accessibility</span>, responsive design, and unit testing.</p>
+<p>In my free time, I enjoy spending time with my wife and dog. I'm
+passionate about IoT projects around the house, learning more about
+data visualization via d3, and learning new and exciting frameworks
+and build tools.</p>
+
+  </section>
+
+
+  <section class="resume-section experience">
+    <h2 class="resume-section__title " id="experience">
+      Experience
+      <a href="#experience">
+        <i class="fa-fw fa-light fa-hashtag"></i>
+      </a>
+    </h2>
+    <article class="experience-section">
+    <header class="experience-section__header">
+      <h3 class="experience-section__header-title" id="cofense">
+        Cofense
+        <a href="#cofense">
+          <i class="fa-fw fa-light fa-sm fa-hashtag"></i>
+        </a>
+      </h3>
+      <time class="experience-section__header-time" datetime="P3Y10M">Apr 2019 to Present</time>
+      <div class="experience-section__header-location">
+        <address>
+          <i class="location-icon fa-sm fa-location-dot fa-light"></i>
+          Leesburg, VA
+        </address>
+      </div>
+    </header>
+    <div class="experience-section__content">
+      <p>My roles at Cofense include both Senior Front End Engineer, and
+UI Engineering Manager.</p>
+<p>During my time at Cofense, I've led the company's UI Community
+of Practice, spearheaded the UI team's migration to TypeScript,
+and helped guide the team through a major version upgrade of
+the company's internal component library (TSX migration, dark mode
+support, responsive design).</p>
+<p>Additionally, I've been the lead UI engineer on several of
+the companies greenfield initiatives, including the ground up
+redesign/rewrite of the flagship product: PhishMe.</p>
+
+    </div>
+    <aside class="experience-section__tech-stack">
+      <h4 class="sr-only">Technologies</h4>
+      <ul><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Vue
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Typescript
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Jest
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            webpack
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Rollup
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Storybook
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            SCSS
+          </li></ul>
+    </aside>
+  </article><article class="experience-section">
+    <header class="experience-section__header">
+      <h3 class="experience-section__header-title" id="ideas-by-nature">
+        Ideas By Nature
+        <a href="#ideas-by-nature">
+          <i class="fa-fw fa-light fa-sm fa-hashtag"></i>
+        </a>
+      </h3>
+      <time class="experience-section__header-time" datetime="P9M">Jun 2018 to Feb 2019</time>
+      <div class="experience-section__header-location">
+        <address>
+          <i class="location-icon fa-sm fa-location-dot fa-light"></i>
+          Denver, CO
+        </address>
+      </div>
+    </header>
+    <div class="experience-section__content">
+      <p>Ideas By Nature was a small crypto marketing agency specializing
+in decentralized applications on the Ethereum blockchain.</p>
+<p>My role as UI lead at IBN included functioning as product team lead
+on multiple client applications. I was responsible for developing
+the company's versatile styleguides that could be easily adapted
+to any clients needs. I also helped established the company's best
+practices around code reusability, unit testing, and UI build
+pipelines.</p>
+
+    </div>
+    <aside class="experience-section__tech-stack">
+      <h4 class="sr-only">Technologies</h4>
+      <ul><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            React
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Web3
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            MetaMask
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Jest
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Webpack
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            PostCSS
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            node
+          </li></ul>
+    </aside>
+  </article><article class="experience-section">
+    <header class="experience-section__header">
+      <h3 class="experience-section__header-title" id="kenzan">
+        Kenzan
+        <a href="#kenzan">
+          <i class="fa-fw fa-light fa-sm fa-hashtag"></i>
+        </a>
+      </h3>
+      <time class="experience-section__header-time" datetime="P2Y10M">Nov 2015 to Aug 2018</time>
+      <div class="experience-section__header-location">
+        <address>
+          <i class="location-icon fa-sm fa-location-dot fa-light"></i>
+          Denver, CO
+        </address>
+      </div>
+    </header>
+    <div class="experience-section__content">
+      <p>Kenzan is a software development consulting agency. I served as
+an embedded engineer on various client teams. My experience at Kenzan
+gave me the opportunity to learn a breadth of technology stacks, as
+each client had different project requirements.</p>
+<p>I also spent time working on Kenzan internal project initiatives, which
+gave me the opportunity to get my hands on emerging technologies as the
+company assessed these technologies for client implementation.</p>
+<p>Because of Kenzan's focus on microservice architecture, my work included
+work on various edge tier services built in node.</p>
+
+    </div>
+    <aside class="experience-section__tech-stack">
+      <h4 class="sr-only">Technologies</h4>
+      <ul><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            AngularJS
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            React
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Node
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Jest
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            LESS/SCSS
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Grunt
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            gulp
+          </li></ul>
+    </aside>
+  </article><article class="experience-section">
+    <header class="experience-section__header">
+      <h3 class="experience-section__header-title" id="webolutions">
+        Webolutions
+        <a href="#webolutions">
+          <i class="fa-fw fa-light fa-sm fa-hashtag"></i>
+        </a>
+      </h3>
+      <time class="experience-section__header-time" datetime="P2Y">Oct 2013 to Oct 2015</time>
+      <div class="experience-section__header-location">
+        <address>
+          <i class="location-icon fa-sm fa-location-dot fa-light"></i>
+          Denver, CO
+        </address>
+      </div>
+    </header>
+    <div class="experience-section__content">
+      <p>Webolutions is a small marketing agency located in the Denver Metro Area.</p>
+<p>My responsibilities as web developer included desiging and implementing
+custom WordPress themes and plugins for a diverse set of clients.
+I was heavily involved through the entire evolution of a new
+WordPress website, from meeting with the client to discover their
+needs, to final delivery of the product.</p>
+
+    </div>
+    <aside class="experience-section__tech-stack">
+      <h4 class="sr-only">Technologies</h4>
+      <ul><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            WordPress
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            jQuery
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            LESS
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            gulp
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            Grunt
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            bower
+          </li><li>
+            <i class="fa-light fa-check fa-sm"></i>
+            PHP
+          </li></ul>
+    </aside>
+  </article>
+  </section>
+
+
+  </div>
+</div>
+
+    </main>
+  </body>
+</html>
