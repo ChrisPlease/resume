@@ -7,7 +7,15 @@
   /* color-scheme: light dark; */
 
   color: rgba(var(--text-color), .85);
-  background-color: rgb(var(--bg-color));
+  background:
+    no-repeat 0/cover
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, .125),
+      rgba(255, 0, 0, 0)
+    ),
+    rgb(var(--bg-color))
+
 }
 
 html {

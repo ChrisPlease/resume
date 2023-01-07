@@ -145,3 +145,9 @@
     column-count: 1;
   }
 }
+
+@media screen {
+  .resume {
+    margin-bottom: 5rem;
+  }
+}

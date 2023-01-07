@@ -11,9 +11,3 @@
   justify-content: space-around;
   flex-direction: column;
 }
-
-@media screen {
-  #app {
-    margin-bottom: 5rem;
-  }
-}

@@ -11,3 +11,7 @@
 .contact-info .contact-info__detail {
   margin: 0;
 }
+
+.contact-info a {
+  text-decoration: none;
+}

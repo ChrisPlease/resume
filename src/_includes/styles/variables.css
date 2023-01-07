@@ -1,30 +1,32 @@
-:root {
-  --bg-color: 245, 245, 245;
-  --bg-alt-color: 240, 240, 240;
-  --text-color: 36, 36, 36;
-  --link-color: 12, 123, 321;
-  --track-color: 200, 200, 200;
-  --button-color: 255, 255, 255;
-  --button-hover-color: 249, 249, 249;
-  --shadow-color: 10, 10, 10;
-}
-
-@media print {
+@media screen, print {
   :root {
-    --bg-color: 255, 255, 255;
+    --bg-color: 245, 245, 245;
+    --bg-alt-color: 240, 240, 240;
     --text-color: 36, 36, 36;
-    --link-color: 12, 123, 321;
+    --link-color: 12, 123, 255;
     --track-color: 200, 200, 200;
+    --button-color: 255, 255, 255;
+    --button-hover-color: 249, 249, 249;
+    --shadow-color: 10, 10, 10;
   }
 }
 
-[data-theme="dark"] {
-  --bg-color: 36, 36, 36;
-  --bg-alt-color: 32, 32, 32;
-  --text-color: 254, 254, 254;
-  --link-color: 12, 123, 321;
-  --track-color: 100, 100, 100;
-  --button-color: 26, 26, 26;
-  --button-hover-color: 20, 20, 20;
+@media screen {
+  [data-theme="dark"] {
+    --bg-color: 36, 36, 36;
+    --bg-alt-color: 32, 32, 32;
+    --text-color: 254, 254, 254;
+    --link-color: 12, 123, 255;
+    --track-color: 100, 100, 100;
+    --button-color: 26, 26, 26;
+    --button-hover-color: 20, 20, 20;
+  }
 }
 
+@page {
+  margin: 0.5in;
+}
+
+@page :first {
+  margin: 0;
+}
