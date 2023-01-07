@@ -1,4 +1,4 @@
-import { formatDate } from '../utils/dates'
+import { formatDate } from '../../utils/dates'
 
 export const daterange = (className: string, startDate: Date, endDate?: Date): string => {
   const start = formatDate(startDate, { month: 'short', year: 'numeric' })

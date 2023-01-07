@@ -43,6 +43,12 @@ p {
   margin: 0 0 1rem;
 }
 
+code {
+  font-size: 95%;
+  border: 1px solid rgba(var(--text-color), 0.75);
+  border-radius: 5px;
+}
+
 a:link,
 a:visited {
   color: rgb(var(--link-color));

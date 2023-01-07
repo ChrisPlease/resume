@@ -6,15 +6,14 @@
   align-items: center;
   justify-content: flex-end;
   background: rgb(var(--bg-alt-color));
-  height: 60px;
-  padding: 0 1rem;
-  border-radius: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(var(--shadow-color), 0.15);
   z-index: 1000;
 }
 
 .toolbar > *:not(:first-child) {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 .toc-dropdown__content {

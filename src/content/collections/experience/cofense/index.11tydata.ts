@@ -12,7 +12,5 @@ import type { ExperienceMeta } from '../../../../types/ExperienceMeta';
     'Rollup',
     'Storybook',
     'SCSS',
-    'Jenkins',
-    'Gitlab Pipelines',
   ],
 }))()

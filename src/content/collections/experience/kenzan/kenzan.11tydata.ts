@@ -13,7 +13,6 @@ import type { ExperienceMeta } from '../../../../types/ExperienceMeta'
     'LESS/SCSS',
     'Grunt',
     'gulp',
-    'Jenkins',
   ],
 })
 )()

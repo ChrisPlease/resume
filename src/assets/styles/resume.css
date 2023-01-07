@@ -77,6 +77,7 @@
 .experience-section__header-time {
   grid-area: date;
 }
+
 .experience-section__header-time::before {
   content: "//";
   margin: 0 0.25rem;
@@ -86,6 +87,18 @@
 .experience-section__header-location {
   grid-area: location;
   display: flex;
+}
+
+.experience-section__header-location [class^="fa"] {
+  color: rgb(var(--link-color));
+}
+
+.experience-section__tech-stack ul {
+  margin: 0;
+  padding: 0 0 0 1rem;
+  list-style-type: none;
+  font-size: 95%;
+  column-count: 2;
 }
 
 @media print, (min-width: 800px) {
@@ -112,7 +125,7 @@
     grid-gap: 0.5rem;
     grid-template:
       "header stack" auto
-      "content stack" auto / 1fr 300px;
+      "content stack" auto / 1fr minmax(min-content, 200px);
   }
 
   .experience-section__header {
@@ -126,5 +139,9 @@
   .experience-section__tech-stack {
     grid-area: stack;
     align-self: center;
+  }
+
+  .experience-section__tech-stack ul {
+    column-count: 1;
   }
 }

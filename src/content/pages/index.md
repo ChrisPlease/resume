@@ -8,4 +8,4 @@ permalink: /index.html
 
 # Welcome to my site!
 
-Check out my <a href="/resume/">resume</a>.
+Send me a [message](mailto:chris@chrisplease.me), or check out my [resume](/resume/).

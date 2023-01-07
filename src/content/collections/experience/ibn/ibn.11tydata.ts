@@ -12,7 +12,6 @@ import type { ExperienceMeta } from '../../../../types/ExperienceMeta'
     'Jest',
     'Webpack',
     'PostCSS',
-    'CSSModules',
     'node',
   ],
 }))()

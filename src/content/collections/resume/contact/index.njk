@@ -1,5 +1,5 @@
 <dl class="contact-info">
-  {% for item in contact %}
+  {% for item in details %}
     <dt class="contact-info__term">
       <i
         class="fa-{{ 'brands' if item.isBrand else 'light' }} fa-fw fa-lg fa-{{item.icon}}"
@@ -8,7 +8,11 @@
     </dt>
     <dd class="contact-info__detail">
       {% if item.tag === 'a' %}
-        <a href="{{ item.to }}">{{ item.value }}</a>
+        {% if item.to %}
+          <a href="{{ item.to }}">{{ item.value }}</a>
+        {% else %}
+          {{ item.value | urlize | safe }}
+        {% endif %}
       {% endif %}
       {% if item.tag === 'address' %}
         <address>{{ item.value }}</address>

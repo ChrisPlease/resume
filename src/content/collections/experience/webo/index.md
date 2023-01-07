@@ -1,6 +1,7 @@
-Webolutions is a small marketing agency located in the Denver Metro Area. I 
-was responsible for designing and implementing custom WordPress themes, 
-plugins, and extensions for various client websites. Each site began with
-an internal, barebones WordPress theme. My role included initial design
-with the client, then build the theme and any necessary plugins to deliver
-the final product. I was involved with the full development stack.
+Webolutions is a small marketing agency located in the Denver Metro Area.
+
+In my role as engineer at Webolutions, my responsibilities included 
+desiging and implementing custom WordPress themes and plugins for 
+a diverse set of clients. I was heavily involved through the entire
+evolution of a new WordPress website, from meeting with the client to
+discover their needs, to final delivery of the product.

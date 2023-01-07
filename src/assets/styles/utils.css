@@ -10,6 +10,12 @@
   border-width: 0;
 }
 
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}
+
 @media print {
   .screen-only {
     display: none !important;

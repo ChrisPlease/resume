@@ -1,10 +1,14 @@
 <div class="toolbar screen-only">
-  {% include "partials/theme-toggle.njk" %}
   {% if page.fileSlug === 'resume' %}
+    <a href="/" class="button">
+      <i class="fa-fw fa-home fa-light"></i>
+      <span class="sr-only">Home</span>
+    </a>
     <button class="resume__toc-print" type="button" onclick="window.print()">
-      <i class="fa-fw fa-print fa-light fa-xl"></i>
+      <i class="fa-fw fa-print fa-light"></i>
       <span class="sr-only">Print</span>
     </button>
     {% include "partials/toc-dropdown.njk" %}
   {% endif %}
+  {% include "partials/theme-toggle.njk" %}
 </div>

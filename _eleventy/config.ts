@@ -2,7 +2,7 @@ import { Config } from '../types/eleventy'
 import EleventyVitePlugin from '@11ty/eleventy-plugin-vite'
 import { create } from 'ts-node'
 import { UserConfig } from 'vite'
-import { daterange } from './shortcodes'
+import { daterange } from './shortcodes/daterange'
 
 export default function (eleventyConfig: Config): Partial<Config> {
   eleventyConfig.addWatchTarget(__dirname)
