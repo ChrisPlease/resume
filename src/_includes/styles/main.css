@@ -44,9 +44,10 @@ p {
 }
 
 code {
-  font-size: 95%;
-  border: 1px solid rgba(var(--text-color), 0.75);
+  font-size: 80%;
+  border: 1px solid rgba(var(--text-color), 0.5);
   border-radius: 5px;
+  padding: 0.125rem;
 }
 
 a:link,

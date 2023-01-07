@@ -1,9 +1,12 @@
-During my tenure at Cofense, I've been an active contributor on
-application modernization efforts, new project initiatives, and
-contributions to the company's internal component library.
+My roles at Cofense include both Senior Front End Engineer, and 
+UI Engineering Manager. 
 
-My responsibilities have included representing the UI team in project
-development, acting as a team lead across various products, and planning
-initiatives to improve the UI codebase. I'm currently serving as the 
-UI Engineering Manager in charge of all UI projects across the 
-organization.
+During my time at Cofense, I've led the company's UI Community
+of Practice, spearheaded the UI team's migration to TypeScript,
+and helped guide the team through a major version upgrade of
+the company's internal component library (TSX migration, dark mode
+support, responsive design).
+
+Additionally, I've been the lead UI engineer on several of
+the companies greenfield initiatives, including the ground up
+redesign/rewrite of the flagship product: PhishMe.
