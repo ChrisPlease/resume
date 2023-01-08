@@ -8,5 +8,6 @@ the company's internal component library (TSX migration, dark mode
 support, responsive design).
 
 Additionally, I've been the lead UI engineer on several of
-the companies greenfield initiatives, including the ground up
-redesign/rewrite of the flagship product: PhishMe.
+the company's initiatives, including the ground up
+redesign/rewrite of the flagship product into a modern framework, 
+and migrating legacy products to TypeScript.

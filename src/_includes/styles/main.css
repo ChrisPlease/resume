@@ -61,4 +61,9 @@ code {
 a:link,
 a:visited {
   color: rgb(var(--link-color));
+  transition: color 100ms linear;
+}
+
+a:hover {
+  color: rgb(var(--link-hover-color));
 }
