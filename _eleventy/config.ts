@@ -3,6 +3,7 @@ import EleventyVitePlugin from '@11ty/eleventy-plugin-vite'
 import { create } from 'ts-node'
 import { UserConfig } from 'vite'
 import { daterange } from './shortcodes/daterange'
+import { cssmin } from './filters/cssmin'
 
 export default function (eleventyConfig: Config): Partial<Config> {
   eleventyConfig.addWatchTarget(__dirname)
@@ -29,6 +30,8 @@ export default function (eleventyConfig: Config): Partial<Config> {
   })
 
   eleventyConfig.addShortcode('daterange', daterange)
+
+  eleventyConfig.addFilter('cssmin', cssmin)
 
   eleventyConfig.addCollection('resume', (collectionApi) => {
     return collectionApi.getFilteredByGlob(['src/content/collections/resume/**/*'])

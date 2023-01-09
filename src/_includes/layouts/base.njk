@@ -3,15 +3,16 @@
 {% endset %}
 
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="It's my personal website. Here you'll find my resume and contact information." />
     {% set css %}
       {%- include 'styles/variables.css' -%}
       {%- include 'styles/main.css' -%}
     {% endset %}
     <style>
-      {{ css | safe }}
+      {{ css | cssmin | safe }}
     </style>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" href="/favicon.png">
