@@ -45,7 +45,10 @@ export default function (eleventyConfig: Config): Partial<Config> {
   })
 
   eleventyConfig.setServerPassthroughCopyBehavior('copy')
-  eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' })
+  eleventyConfig.addPassthroughCopy({
+    'src/assets': 'assets',
+    'public/': '/',
+  })
 
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     serverOptions: {
@@ -62,6 +65,7 @@ export default function (eleventyConfig: Config): Partial<Config> {
         include: ['@fortawesome/fontawesome-pro'],
       },
       build: {
+        assetsInlineLimit: 0,
         mode: 'production',
         rollupOptions: {
           external: ['@fortawesome/fontawesome-pro'],
@@ -71,7 +75,16 @@ export default function (eleventyConfig: Config): Partial<Config> {
                 return 'fonts'
               }
             },
-            assetFileNames: 'assets/styles/[name].[hash].css',
+            assetFileNames(chunkInfo) {
+              const stringParts = chunkInfo.name?.split('.') || []
+              let extType = stringParts.at(stringParts.length - 1) || ''
+
+              if (/png|svg/i.test(extType)) {
+                extType = 'img'
+              }
+
+              return `assets/${extType}/[name].[hash][extname]`
+            },
             chunkFileNames: 'assets/scripts/[name].[hash].js',
             entryFileNames: 'assets/scripts/[name].[hash].js',
           },
