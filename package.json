@@ -1,8 +1,9 @@
 {
-  "name": "eleventy-sample",
+  "name": "chrisplease-11ty-resume",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "serve": "npm run build -- --serve",
     "prebuild": "npm run clean",
