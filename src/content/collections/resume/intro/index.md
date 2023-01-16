@@ -7,6 +7,5 @@ I have a keen eye for semantic HTML,
 accessibility</span>, responsive design, and unit testing.
 
 In my free time, I enjoy spending time with my wife and dog. I'm 
-passionate about IoT projects around the house, learning more about 
-data visualization via d3, and learning new and exciting frameworks 
-and build tools.
+passionate about IoT projects around the house, and learning new 
+and exciting frameworks and build tools (currently on SvelteKit).
