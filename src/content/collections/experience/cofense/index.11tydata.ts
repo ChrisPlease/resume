@@ -6,6 +6,7 @@ import type { ExperienceMeta } from '../../../../types/ExperienceMeta';
   location: 'Leesburg, VA',
   stack: [
     'Vue',
+    'React',
     'Typescript',
     'Jest',
     'webpack',

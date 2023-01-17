@@ -27,6 +27,7 @@
 .resume-section__title {
   position: relative;
   margin-bottom: 1rem;
+  break-after: avoid;
 }
 
 .resume-section__title:hover a {

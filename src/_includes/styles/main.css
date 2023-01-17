@@ -58,7 +58,6 @@ a:hover {
 
 @media print {
   :root {
-    zoom: 65%;
     background: #fff;
   }
 }
