@@ -25,11 +25,3 @@
   }
 }
 
-@page {
-  margin-top: 0.5in;
-  margin-bottom: 0;
-}
-
-@page :first {
-  margin-top: 0;
-}

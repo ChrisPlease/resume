@@ -1,6 +1,6 @@
 ---
 title: Experience
-order: 2
+order: 10
 ---
 
 {%- for exp in collections.experience | reverse -%}
@@ -23,16 +23,5 @@ order: 2
     <div class="experience-section__content">
       {{ exp.templateContent | safe }}
     </div>
-    <aside class="experience-section__tech-stack">
-      <h4 class="sr-only">Technologies</h4>
-      <ul>
-        {%- for item in exp.data.stack -%}
-          <li>
-            <i class="fa-light fa-check fa-sm"></i>
-            {{ item }}
-          </li>
-        {%- endfor -%}
-      </ul>
-    </aside>
   </article>
 {%- endfor -%}

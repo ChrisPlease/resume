@@ -1,4 +1,4 @@
 (() => ({
   title: 'Introduction',
-  order: 1,
+  order: 2,
 }))()

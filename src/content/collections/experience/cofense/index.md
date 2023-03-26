@@ -1,16 +1,20 @@
-My roles at Cofense include both Senior Front End Engineer, and 
-UI Engineering Manager. 
+I've served as Senior Front End Engineer, and later (currently) as 
+a technical UI Engineering Manager. In these roles, I've had the 
+opportunity to fully immerse myself in the Vue framework. 
 
-During my time at Cofense, I've led the company's UI Community
-of Practice, spearheaded the UI team's migration to TypeScript,
-and helped guide the team through a major version upgrade of
-the company's internal component library (TSX migration, Storybook
-documentation, dark mode support, responsive design). While 
-most Cofense products are written in Vue, I've had extensive experience 
-with React/Storybook and MDX for documenting the company's robust 
-component library.
+I've had the opportunity to mentor junior developers. I run the 
+company's UI Community of Practice (weekly meeting for the UI team 
+to share news/insights), provide thorough code reviews, and frequently 
+pair program with junior engineers.
 
-Additionally, I've been the lead UI engineer on several of
-the company's initiatives, including the ground up
-redesign/rewrite of the flagship product into a modern framework, 
-and migrating legacy products to TypeScript.
+As a Senior Front End Engineer and technical manager, I've served as 
+team lead on several of the company's UI initiatives. These 
+initiatives include:
+
+* Plan/Implement a major release of the internal component library 
+  * converting components to TSX
+  * dark/light mode support
+  * `a11y` audit and improvement
+  * documentation rewrite in Storybook/MDX
+* Rebuild flagship product from legacy Rails app to Vue SPA
+* Several greenfield initiatives/product offerings

@@ -3,5 +3,5 @@ export interface ExperienceMeta {
   startDate: Date
   endDate?: Date
   location: string
-  stack: string[]
+  stack?: string[]
 }
