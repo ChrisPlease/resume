@@ -1,0 +1,19 @@
+.proficiencies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.proficiencies__list {
+  width: 100%;
+  list-style-type: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  column-count: 2;
+}
+
+@media print, (min-width: 860px) {
+  .proficiencies__list {
+    column-count: 5;
+  }
+}

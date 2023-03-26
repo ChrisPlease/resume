@@ -4,7 +4,7 @@ import type { ExperienceMeta } from '../../../../types/ExperienceMeta';
   title: 'Cofense',
   startDate: new Date(2019, 3, 8),
   location: 'Leesburg, VA',
-  stack: [
+  /* stack: [
     'Vue',
     'React',
     'Typescript',
@@ -13,5 +13,5 @@ import type { ExperienceMeta } from '../../../../types/ExperienceMeta';
     'Rollup',
     'Storybook',
     'SCSS',
-  ],
+  ], */
 }))()

@@ -1,0 +1,11 @@
+<div class="proficiencies">
+<ul class="proficiencies__list">
+  {% for key, value in proficiencies %}
+    {%- for item in value.list -%}
+      <li class="proficiencies__list-item">
+        {{item}}
+      </li>
+    {%- endfor -%}
+  {% endfor %}
+</ul>
+</div>

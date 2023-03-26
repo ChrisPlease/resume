@@ -74,3 +74,12 @@ a:hover {
       rgb(var(--bg-color));
   }
 }
+
+@page {
+  margin-top: 0.5in;
+  margin-bottom: 0.25in;
+}
+
+@page :first {
+  margin-top: 0;
+}

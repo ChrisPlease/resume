@@ -49,22 +49,22 @@ export class CollapsiblePanel {
   }
 
   animateOpen (): void {
-    const foo = new Array<number>(100).fill(1).map((_, step) => {
+    const outer = new Array<number>(100).fill(1).map((_, step) => {
       const easedStep = ease(step / 100)
       return `scale(1, ${easedStep})`
     })
 
-    const bar = new Array<number>(100).fill(1).map((_, step) => {
+    const inner = new Array<number>(100).fill(1).map((_, step) => {
       const easedStep = 1 / ease(step / 100)
       return `scale(1, ${easedStep})`
     })
 
     this._content.animate({
-      transform: foo,
+      transform: outer,
     }, { duration: 1000 })
 
     this._content.querySelector('nav')?.animate({
-      transform: bar,
+      transform: inner,
     }, { duration: 1000 })
   }
 
@@ -73,16 +73,19 @@ export class CollapsiblePanel {
     this._toggle.classList.remove('is-open')
     this._content.classList.remove('is-open')
     this._toggle.setAttribute('aria-expanded', 'false')
+    this._content.setAttribute('aria-hidden', 'true')
     this.isOpen = false
 
     this._content.removeEventListener('click', this.clickHandler)
   }
 
   expandPanel (): void {
+    this._content.style.display = 'block'
     this.animateOpen()
     this._toggle.classList.add('is-open')
     this._content.classList.add('is-open')
     this._toggle.setAttribute('aria-expanded', 'true')
+    this._content.setAttribute('aria-hidden', 'false')
     this.isOpen = true
 
     this._content.addEventListener('click', this.clickHandler)
@@ -100,6 +103,9 @@ export class CollapsiblePanel {
   init (): void {
     this._toggle.setAttribute('aria-haspopup', 'menu')
     this._toggle.setAttribute('aria-expanded', 'false')
+
+    this._content.setAttribute('aria-hidden', 'true')
+    this._content.style.display = 'none'
 
     this._toggle.addEventListener('click', (e) => { this.togglePanel(e) }, false)
   }
