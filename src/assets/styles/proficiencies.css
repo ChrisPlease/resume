@@ -14,6 +14,6 @@
 
 @media print, (min-width: 860px) {
   .proficiencies__list {
-    column-count: 6;
+    column-count: 5;
   }
 }
