@@ -7,7 +7,7 @@
     <meta name="description" content="It's my personal website. Here you'll find my resume and contact information." />
     
     <style>
-      @media screen,print{:root{--bg-color:245,245,245;--bg-alt-color:240,240,240;--text-color:36,36,36;--link-color:12,123,255;--link-hover-color:5,75,155;--track-color:200,200,200;--button-color:255,255,255;--button-hover-color:249,249,249;--shadow-color:10,10,10}}@media screen{[data-theme=dark]{--bg-color:36,36,36;--bg-alt-color:32,32,32;--text-color:254,254,254;--link-color:12,123,255;--link-hover-color:87,158,243;--track-color:100,100,100;--button-color:26,26,26;--button-hover-color:20,20,20}}@page{margin-top:.5in;margin-bottom:0}@page :first{margin-top:0}:root{font-family:Inter,Avenir,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:400;color:rgba(var(--text-color),.85)}html{height:100vh;scroll-behavior:smooth;box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{min-height:100vh;margin:0;padding:0;display:flex;flex-direction:column;justify-content:center}h1,h2,h3,h4,h5,h6{font-weight:600;line-height:1;margin:0}address{font-style:normal}p{margin:0 0 1rem}code{font-size:80%;border:1px solid rgba(var(--text-color),.5);border-radius:5px;padding:.125rem}a:link,a:visited{color:rgb(var(--link-color));transition:color .1s linear}a:hover{color:rgb(var(--link-hover-color))}@media print{:root{background:#fff}}@media screen{:root{background:no-repeat 0/cover linear-gradient(to bottom,rgba(0,0,0,.125),rgba(255,0,0,0)),rgb(var(--bg-color))}}
+      @media screen,print{:root{--bg-color:245,245,245;--bg-alt-color:240,240,240;--text-color:36,36,36;--link-color:12,123,255;--link-hover-color:5,75,155;--track-color:200,200,200;--button-color:255,255,255;--button-hover-color:249,249,249;--shadow-color:10,10,10}}@media screen{[data-theme=dark]{--bg-color:36,36,36;--bg-alt-color:32,32,32;--text-color:254,254,254;--link-color:12,123,255;--link-hover-color:87,158,243;--track-color:100,100,100;--button-color:26,26,26;--button-hover-color:20,20,20}}:root{font-family:Inter,Avenir,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:400;color:rgba(var(--text-color),.85)}html{height:100vh;scroll-behavior:smooth;box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{min-height:100vh;margin:0;padding:0;display:flex;flex-direction:column;justify-content:center}h1,h2,h3,h4,h5,h6{font-weight:600;line-height:1;margin:0}address{font-style:normal}p{margin:0 0 1rem}code{font-size:80%;border:1px solid rgba(var(--text-color),.5);border-radius:5px;padding:.125rem}a:link,a:visited{color:rgb(var(--link-color));transition:color .1s linear}a:hover{color:rgb(var(--link-hover-color))}@media print{:root{background:#fff}}@media screen{:root{background:no-repeat 0/cover linear-gradient(to bottom,rgba(0,0,0,.125),rgba(255,0,0,0)),rgb(var(--bg-color))}}@page{margin-top:.5in;margin-bottom:.25in}@page :first{margin-top:0}
     </style>
     <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.b8dd2e88.svg">
     <link rel="icon" type="image/png" href="/assets/img/favicon.3483cf99.png">
@@ -17,10 +17,10 @@
     
   
 
-    <script type="module" crossorigin src="/assets/scripts/index.a1cc902f.js"></script>
+    <script type="module" crossorigin src="/assets/scripts/index.4bb2b6cd.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/scripts/fonts.ec082ce4.js">
-    <link rel="modulepreload" crossorigin href="/assets/scripts/main.70e287a0.js">
-    <link rel="stylesheet" href="/assets/css/main.a27cf618.css">
+    <link rel="modulepreload" crossorigin href="/assets/scripts/main.c3e6e654.js">
+    <link rel="stylesheet" href="/assets/css/main.2df4e02d.css">
   </head>
   <body>
     
@@ -65,6 +65,13 @@
             </a></li>
           
           <li>
+            <a href="#areas-of-expertise">
+              <i class="fa-fw fa-light fa-hashtag fa-sm"></i>
+              Areas of Expertise
+              <i class="fa-fw fa-light fa-right fa-xs"></i>
+            </a></li>
+          
+          <li>
             <a href="#experience">
               <i class="fa-fw fa-light fa-hashtag fa-sm"></i>
               Experience
@@ -102,8 +109,8 @@
   <label class="theme-toggle" for="theme-toggle">
   <span class="sr-only">Toggle Theme</span>
   <i class="fa-sun fa-light fa-fw fa-lg"></i>
-  <input class="theme-toggle__input" id="theme-toggle" type="checkbox"></input>
-  <span class="theme-toggle__faux-input"></span>
+  <input class="theme-toggle__input sr-only" id="theme-toggle" type="checkbox"></input>
+  <button id="faux-toggle" class="theme-toggle__faux-input"></button>
   <i class="fa-moon fa-light fa-fw fa-lg"></i>
 </label>
 
@@ -214,16 +221,89 @@
         <i class="fa-fw fa-light fa-hashtag"></i>
       </a>
     </h2>
-    <p>Dedicated and passionate front end engineer with over 10 years
-experience in the industry. Experience in working with teams
-of all sizes. Specializing in writing semantic HTML, clean CSS,
-and highly reusable components in modern front end applications.
-I have a keen eye for semantic HTML,
+    <p>Dedicated and passionate front end engineer with 10 years
+experience in the industry. I have experience in working with teams
+of all sizes, from being a solo front end engineer on a full stack
+team, to leading a team of up to 5 engineers on a project. I thrive
+in a collaborative environment. Specializing in writing semantic HTML,
+clean CSS, and highly reusable components in modern front end
+applications. I have a keen eye for semantic HTML,
 <span class="screen-only"><code>a11y</code></span><span class="print-only">
 accessibility</span>, responsive design, and unit testing.</p>
-<p>In my free time, I enjoy spending time with my wife and dog. I'm
-passionate about IoT projects around the house, and learning new
-and exciting frameworks and build tools (currently on SvelteKit).</p>
+
+  </section>
+
+
+  <section class="resume-section areas-of-expertise">
+    <h2 class="resume-section__title " id="areas-of-expertise">
+      Areas of Expertise
+      <a href="#areas-of-expertise">
+        <i class="fa-fw fa-light fa-hashtag"></i>
+      </a>
+    </h2>
+    <div class="proficiencies">
+<ul class="proficiencies__list">
+  <li class="proficiencies__list-item">
+        React
+      </li><li class="proficiencies__list-item">
+        Vue
+      </li><li class="proficiencies__list-item">
+        AngularJS
+      </li><li class="proficiencies__list-item">
+        Svelte
+      </li><li class="proficiencies__list-item">
+        Express
+      </li><li class="proficiencies__list-item">
+        Apollo Server
+      </li><li class="proficiencies__list-item">
+        Prisma
+      </li><li class="proficiencies__list-item">
+        Sequelize
+      </li><li class="proficiencies__list-item">
+        Storybook
+      </li><li class="proficiencies__list-item">
+        Jest
+      </li><li class="proficiencies__list-item">
+        Mocha
+      </li><li class="proficiencies__list-item">
+        Testing Library
+      </li><li class="proficiencies__list-item">
+        GraphQL
+      </li><li class="proficiencies__list-item">
+        REST
+      </li><li class="proficiencies__list-item">
+        ECMAScript
+      </li><li class="proficiencies__list-item">
+        TypeScript
+      </li><li class="proficiencies__list-item">
+        HTML
+      </li><li class="proficiencies__list-item">
+        CSS
+      </li><li class="proficiencies__list-item">
+        git
+      </li><li class="proficiencies__list-item">
+        VueCLI
+      </li><li class="proficiencies__list-item">
+        CRA
+      </li><li class="proficiencies__list-item">
+        Vite
+      </li><li class="proficiencies__list-item">
+        Rollup
+      </li><li class="proficiencies__list-item">
+        Webpack
+      </li><li class="proficiencies__list-item">
+        Jenkins
+      </li><li class="proficiencies__list-item">
+        SASS
+      </li><li class="proficiencies__list-item">
+        LESS
+      </li><li class="proficiencies__list-item">
+        PostgreSQL
+      </li><li class="proficiencies__list-item">
+        MySQL
+      </li>
+</ul>
+</div>
 
   </section>
 
@@ -243,7 +323,7 @@ and exciting frameworks and build tools (currently on SvelteKit).</p>
           <i class="fa-fw fa-light fa-sm fa-hashtag"></i>
         </a>
       </h3>
-      <time class="experience-section__header-time" datetime="P3Y10M">Apr 2019 to Present</time>
+      <time class="experience-section__header-time" datetime="P4Y">Apr 2019 to Present</time>
       <div class="experience-section__header-location">
         <address>
           <i class="location-icon fa-sm fa-location-dot fa-light"></i>
@@ -252,50 +332,30 @@ and exciting frameworks and build tools (currently on SvelteKit).</p>
       </div>
     </header>
     <div class="experience-section__content">
-      <p>My roles at Cofense include both Senior Front End Engineer, and
-UI Engineering Manager.</p>
-<p>During my time at Cofense, I've led the company's UI Community
-of Practice, spearheaded the UI team's migration to TypeScript,
-and helped guide the team through a major version upgrade of
-the company's internal component library (TSX migration, Storybook
-documentation, dark mode support, responsive design). While
-most Cofense products are written in Vue, I've had extensive experience
-with React/Storybook and MDX for documenting the company's robust
-component library.</p>
-<p>Additionally, I've been the lead UI engineer on several of
-the company's initiatives, including the ground up
-redesign/rewrite of the flagship product into a modern framework,
-and migrating legacy products to TypeScript.</p>
+      <p>I've served as Senior Front End Engineer, and later (currently) as
+a technical UI Engineering Manager. In these roles, I've had the
+opportunity to fully immerse myself in the Vue framework.</p>
+<p>I've had the opportunity to mentor junior developers. I run the
+company's UI Community of Practice (weekly meeting for the UI team
+to share news/insights), provide thorough code reviews, and frequently
+pair program with junior engineers.</p>
+<p>As a Senior Front End Engineer and technical manager, I've served as
+team lead on several of the company's UI initiatives. These
+initiatives include:</p>
+<ul>
+<li>Plan/Implement a major release of the internal component library
+<ul>
+<li>converting components to TSX</li>
+<li>dark/light mode support</li>
+<li><code>a11y</code> audit and improvement</li>
+<li>documentation rewrite in Storybook/MDX</li>
+</ul>
+</li>
+<li>Rebuild flagship product from legacy Rails app to Vue SPA</li>
+<li>Several greenfield initiatives/product offerings</li>
+</ul>
 
     </div>
-    <aside class="experience-section__tech-stack">
-      <h4 class="sr-only">Technologies</h4>
-      <ul><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Vue
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            React
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Typescript
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Jest
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            webpack
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Rollup
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Storybook
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            SCSS
-          </li></ul>
-    </aside>
   </article><article class="experience-section">
     <header class="experience-section__header">
       <h3 class="experience-section__header-title" id="ideas-by-nature">
@@ -315,39 +375,20 @@ and migrating legacy products to TypeScript.</p>
     <div class="experience-section__content">
       <p>Ideas By Nature was a small crypto marketing agency specializing
 in decentralized applications on the Ethereum blockchain.</p>
-<p>My role as UI lead at IBN included functioning as product team lead
-on multiple client applications. I was responsible for developing
-the company's versatile styleguides that could be easily adapted
-to any clients needs. I also helped established the company's best
-practices around code reusability, unit testing, and UI build
-pipelines.</p>
+<p>Responsibilities included:</p>
+<ul>
+<li>Worked on various internal projects and decentralized applications on the Ethereum blockchain</li>
+<li>Helped establish internal best practices relating to front end development and mobile application development</li>
+<li>Interaction with Web3 and the Ethereum blockchain, and the MetaMask wallet</li>
+<li>Worked with libraries including:
+<ul>
+<li>Web3 v1</li>
+<li>React NativeReact v16</li>
+</ul>
+</li>
+</ul>
 
     </div>
-    <aside class="experience-section__tech-stack">
-      <h4 class="sr-only">Technologies</h4>
-      <ul><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            React
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Web3
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            MetaMask
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Jest
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Webpack
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            PostCSS
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            node
-          </li></ul>
-    </aside>
   </article><article class="experience-section">
     <header class="experience-section__header">
       <h3 class="experience-section__header-title" id="kenzan">
@@ -374,33 +415,31 @@ gave me the opportunity to get my hands on emerging technologies as the
 company assessed these technologies for client implementation.</p>
 <p>Because of Kenzan's focus on microservice architecture, my work included
 work on various edge tier services built in node.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Worked on various applications including data-driven, feature-rich internal projects to large scale client web applications driven through micro-service architectures</li>
+<li>Utilized front-end technologies including:
+<ul>
+<li>Angular 1.x and React</li>
+<li>Javascript ES5 and ES6</li>
+<li>CSS/SASS/LESS</li>
+<li>HTML5</li>
+<li>npm and yarn</li>
+<li>Webpack</li>
+</ul>
+</li>
+<li>Full Stack experience:
+<ul>
+<li>Node.js</li>
+<li>Express</li>
+<li>MongoDB</li>
+<li>Loopback</li>
+<li>AWS</li>
+</ul>
+</li>
+</ul>
 
     </div>
-    <aside class="experience-section__tech-stack">
-      <h4 class="sr-only">Technologies</h4>
-      <ul><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            AngularJS
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            React
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Node
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Jest
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            LESS/SCSS
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Grunt
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            gulp
-          </li></ul>
-    </aside>
   </article><article class="experience-section">
     <header class="experience-section__header">
       <h3 class="experience-section__header-title" id="webolutions">
@@ -419,38 +458,14 @@ work on various edge tier services built in node.</p>
     </header>
     <div class="experience-section__content">
       <p>Webolutions is a small marketing agency located in the Denver Metro Area.</p>
-<p>My responsibilities as web developer included desiging and implementing
-custom WordPress themes and plugins for a diverse set of clients.
-I was heavily involved through the entire evolution of a new
-WordPress website, from meeting with the client to discover their
-needs, to final delivery of the product.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Maintained and updated various client websites (HTML &amp; WordPress)</li>
+<li>Responsible for custom plugin functionality for various clients</li>
+<li>Extended custom WordPress themes</li>
+</ul>
 
     </div>
-    <aside class="experience-section__tech-stack">
-      <h4 class="sr-only">Technologies</h4>
-      <ul><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            WordPress
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            jQuery
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            LESS
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            gulp
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            Grunt
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            bower
-          </li><li>
-            <i class="fa-light fa-check fa-sm"></i>
-            PHP
-          </li></ul>
-    </aside>
   </article>
   </section>
 
