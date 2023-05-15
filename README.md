@@ -1,19 +1,10 @@
-# Welcome to my resume
+# Hi, I'm Chris
 
-Static site powered by [11ty][]. 
+I'm currently a UI Architect working primarily with Vue. Previous experience includes React and AngularJS.
 
-## Getting started
+In my free time, I enjoy learning about Svelte(kit) and GraphQL.
 
-Install dependencies:
+Check out my [resume][] powered by [11ty][]. 
 
-`npm ci`
-
-Serve locally:
-
-`npm run serve`
-
-Build for production:
-
-`npm run build`
-
+[resume]: https://chrisplease.me/resume
 [11ty]: https://11ty.dev
